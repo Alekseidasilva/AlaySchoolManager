@@ -1,0 +1,323 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+
+
+
+
+<script type="text/javascript" asp-append-version="true">
+    $(document).ready(function () {
+        OcultarTotalOpcional();
+        //Modulo----> Ao selecionar
+        var moduloId = 0;
+        $("#ModCreche").click(function () {
+            moduloId = $("#ModCreche").val();
+            PreencherResumoModuloSelecionado(moduloId);
+            if (moduloId == 1) {
+                CarregarEmolumentosObrigatorios(moduloId);
+                CarregarEmolumentosOpcionais(moduloId);
+            }
+            else {
+                alert("o Modulo deve ser Selecionado");
+            }
+        });
+        $("#ModColegio").click(function () {
+            moduloId = $("#ModColegio").val();
+            PreencherResumoModuloSelecionado(moduloId);
+            if (moduloId == 2) {
+                CarregarEmolumentosObrigatorios(moduloId);
+                CarregarEmolumentosOpcionais(moduloId);
+            }
+            else {
+                alert("o Modulo deve ser Selecionado");
+            }
+        });
+        // EMolumentos Obrigatorios
+        let somaDosEmolumentoObrigatorios = [];
+        let somaDosEmolumentoOpcionais = [];
+        document.getElementById('EmolumentosObrigatorios').change = function () {
+            var selectedOptions = [];
+            for (let option of document.getElementById('EmolumentosObrigatorios').options) {
+                if (option.selected) {
+                    selectedOptions.push(option.value);
+                }
+            };
+            $.ajax({
+                url: "@Url.Action("ListarPrecoEmolumento")",
+                type: "post",
+                dataType: "json",
+                contextType: "application/json",
+                data: { selectedIds: selectedOptions },
+                traditional: true,
+                success: function (result) {
+                    MostrarTotalObrigatorio(result);
+                },
+                error: function (err) {
+                    alert("Nao foi possivel carregar o valor total dos emolumentos, Erro:" + err);
+                }
+            });
+        };
+        // EMolumentos Opcionais
+        document.getElementById('EmolumentosOpcionais').change = function () {
+            var selectedOpcionais = [];
+            for (let option of document.getElementById('EmolumentosOpcionais').options) {
+                if (option.selected) {
+                    selectedOpcionais.push(option.value);
+                }
+            };
+            $.ajax({
+                url: "@Url.Action("ListarPrecoEmolumento")",
+                type: "post",
+                dataType: "json",
+                contextType: "application/json",
+                data: { selectedIds: selectedOpcionais },
+                traditional: true,
+                success: function (result) {
+                    MostrarTotalOpcional(result);
+                },
+                error: function (err) {
+                    alert("Nao foi possivel carregar o valor total dos emolumentos, Erro:" + err);
+                }
+            });
+        };
+    });
+
+    function PreencherResumoModuloSelecionado(moduloId) {
+        if (moduloId == 1) {
+            $("#lblResumoAlunoModulo").text('CRECHE');
+        } else {
+            $("#lblResumoAlunoModulo").text('COLEGIO');
+        }
+    }
+    function OcultarTotalObrigatorios() {
+        $('#lblTotalObrigario').hide();
+    };
+    function MostrarTotalObrigatorio(valor) {
+        $('#lblTotalObrigario').show();
+        $('#lblTotalObrigario').text(valor);
+    };
+    function OcultarTotalOpcional() {
+        $('#lblTotalOpcional').hide();
+    };
+    function MostrarTotalOpcional(valor) {
+        $('#lblTotalOpcional').show();
+        $('#lblTotalOpcional').text(valor);
+    };
+    function CarregarEmolumentosObrigatorios(moduloId) {
+        $.ajax({
+            type: "Get",
+            url: "@Url.Action("ListarEmolumentosObrigatoriosPorModuloId")",
+            data: { "moduloId": moduloId },
+            success: function (response) {
+                var items = '';
+                $(response).each(function () {
+                    items += "<option value=" + this.value + ">" + this.text + "</option>";
+                });
+                $("#EmolumentosObrigatorios").html(items);
+            },
+            failure: function (response) {
+                alert(response.responseText);
+            },
+            error: function (response) {
+                alert(response.responseText);
+            }
+        });
+    };
+    function CarregarEmolumentosOpcionais(moduloId) {
+        $.ajax({
+            type: "Get",
+            url: "@Url.Action("ListarEmolumentosOpcionaisPorModuloId")",
+            data: { "moduloId": moduloId },
+            success: function (response) {
+                var items = '';
+                $(response).each(function () {
+                    items += "<option value=" + this.value + ">" + this.text + "</option>";
+                });
+                $("#EmolumentosOpcionais").html(items);
+            },
+            failure: function (response) {
+                alert(response.responseText);
+            },
+            error: function (response) {
+                alert(response.responseText);
+            }
+        });
+    };
+
+
+    /*Preencher Dados do Resumo*/
+    $(document).ready(function () {
+        $("#txtAlunoNomeCompleto").change(function () {
+            $("#lblResumoAlunoNomeCompleto").text($("#txtAlunoNomeCompleto").val());
+        });
+
+        $("#txtAlunoContribuinte").change(function () {
+            $("#lblResumoAlunoNifDataNascimento").text($("#txtAlunoContribuinte").val() + ' / ' +
+                $("#txtAlunoDataNascimento").value);
+            alert($('#txtAlunoDataNascimento').val());
+        });
+
+        // $("#txtAlunoDataNascimento").change(function () {
+        //     $("#lblResumoNomeCOmpleto").text($("#txtAlunoNomeCompleto").val());
+        // });
+
+    });
+
+
+</script>
+
+
+
+<form asp-action="Matricular" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="pd-ltr-20 xs-pd-20-10">
+        <div class="min-height-200px">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="title">
+                            <h4>Efectuando Matriculas</h4>
+                        </div>
+                        <nav aria-label="breadcrumb" role="navigation">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a asp-area="Administracao" asp-controller="Home" asp-action="Dashboard">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Matricular</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-wrap">
+                <div id="accordion">
+                    <!--Modulos-->
+                    <div class="card">
+                        <div class="card-header ">
+                            <a class="btn btn-block" data-toggle="collapse" data-target="#faq1">
+                                Seleção do Módulo
+                            </a>
+                        </div>
+                        <div id="faq1" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                <partial name="Partials/_modulos" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--Dados do Aluno-->
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn btn-block collapsed" data-toggle="collapse" data-target="#faq2">
+                                Dados Pessoais do Aluno #2
+                            </a>
+                        </div>
+                        <div id="faq2" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <partial name="Partials/_dadosAluno" />
+                            </div>
+                        </div>
+                    </div>
+                    <!--Emolumentos-->
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn btn-block collapsed" data-toggle="collapse" data-target="#faq3">
+                                Emolumentos Obrigatórios <i class="badge badge-success" id="lblTotalObrigario"></i>  e Opcionais <i class="badge badge-warning" id="lblTotalOpcional"></i>   #3
+                            </a>
+                        </div>
+                        <div id="faq3" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <partial name="Partials/_emolumentos" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn btn-block collapsed" data-toggle="collapse" data-target="#faq4">
+                                Por Implementar #4
+                            </a>
+                        </div>
+                        <div id="faq4" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <!--formas de Pagamento-->
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn btn-block collapsed" data-toggle="collapse" data-target="#faq5">
+                                Formas de Pagamento #5
+                            </a>
+                        </div>
+                        <div id="faq5" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+
+                                <partial name="Partials/_pagamento" />
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--Resumo e Finalização-->
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn btn-block collapsed" data-toggle="collapse" data-target="#faq6">
+                                Resumo & Finalizar Matricula #6
+                            </a>
+                        </div>
+                        <div id="faq6" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <partial name="Partials/_resumo" />
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmation-modal"><span class="icon-copy ti-close"></span> Cancelar Matricula</button>
+                                <button type="submit" class="btn btn-success pull-right"><span class="icon-copy ti-save"></span> Finalizar Matricula</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+
+
+
+<!-- Confirmation modal -->
+<div class="modal fade" id="confirmation-modal" tabindex="-1" role="dialog" aria-labelledby="confirmation-modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmation-modalLabel">Cancelar Matricula</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center font-16">
+                <h7 class="padding-top-30 mb-30 weight-500">Deseja realmente cancelar a Matricula?</h7>
+
+            </div>
+            <div class="modal-footer">
+                <a type="button" class="btn btn-danger" data-dismiss="modal">Não</a>
+                <a href="@Url.Action("Matriculados","Matricula")" type="button" class="btn btn-success">Sim</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+@*  @section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}  *@

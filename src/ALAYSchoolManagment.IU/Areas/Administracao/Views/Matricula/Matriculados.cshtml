@@ -1,0 +1,84 @@
+﻿@using ALAYSchoolManagment.Application.ViewModels
+@using ALAYSchoolManagment.Infra.CrossCutting.Extensions
+@model IEnumerable<ALAYSchoolManagment.Application.ViewModels.MatriculasViewModel>
+
+@{
+    ViewData["Title"] = "Alunos Matriculados";
+}
+<div class="row page-titles mx-0">
+    <div class="col p-md-0">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Dashboard1">Home</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Alunos Matriculados</a></li>
+        </ol>
+    </div>
+</div>
+<!-- row -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-header card-title">Alunos Matriculados</h4>
+                    <div class="dropdown-button">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn mb-1 btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa-solid fa-plus-large"></i> Nova Acção</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item btn btn-primary" asp-action="Matricular" asp-controller="Matricula"><i class="fa-regular fa-person-circle-plus"></i> Matricular</a>
+                                <a class="dropdown-item btn btn-primary" asp-controller="MatriculaConfirmar" asp-action="Confirmar"><i class="fa-regular fa-check-double"></i> Confirmar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nº Matricula</th>
+                                    <th scope="col">Nome Completo do Aluno</th>
+                                    <th scope="col">Data Nascimento</th>
+                                    <th scope="col">Módulo</th>
+                                    <th scope="col">Data Cadastro</th>
+                                    <th scope="col">Utilizador</th>
+                                    <th scope="col">Acções</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (MatriculasViewModel item in Model)
+                                {
+                                    <tr>
+                                        <td scope="col">01</td>
+                                        <td class="align-content-center" title="Visualizar Perfil"><a asp-action="Detalhes" asp-route-id="@item.MatricuAluno.AlunoNMatricula"> @item.MatricuAluno.AlunoNMatricula</a></td>
+                                        <td>@item.MatricuAluno.AlunoNomeCompleto</td>
+                                        <td>@item.MatricuAluno.AlunoDataNascimento.ConverterData()</td>
+                                        @if (item.MatriculaModuloId == 1)
+                                        {
+                                            <td><span class="badge badge-success px-2">Creche</span></td>
+                                        }
+                                        else
+                                        {
+                                            <td><span class="badge badge-primary px-2">Colegio</span></td>
+                                        }
+                                        <td>@item.DataHora.ConverterDataHora()</td>
+                                        <td>@item.MatriculaUsuarioId</td>
+                                        <td>
+                                            <span>
+                                                <a asp-controller="Matricula" asp-route-id="@item.MatricuAluno.AlunoNMatricula" data-toggle="tooltip" data-placement="top" title="Reimprimir"><i class="fa-regular fa-print fa-lg" style="color: #7571F9;"></i></a>
+                                                <a asp-controller="Matricula" asp-route-id="@item.MatricuAluno.AlunoNMatricula" data-toggle="tooltip" data-placement="top" title="Cancelar"><i class="fa-solid fa-ban fa-bounce fa-lg" style="color: #e93535;"></i></a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #/ container -->
+@* <partial name="_ValidationScriptsPartial" /> *@

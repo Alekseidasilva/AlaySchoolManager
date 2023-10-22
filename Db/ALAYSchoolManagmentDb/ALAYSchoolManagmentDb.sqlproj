@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ALAYSchoolManagmentDb</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ab8612af-afe9-4997-bc0d-232ccdaf76bf}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>ALAYSchoolManagmentDb</RootNamespace>
+    <AssemblyName>ALAYSchoolManagmentDb</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="ContinuousDeployment" />
+    <Folder Include="ContinuousDeployment\StaticTables" />
+    <Folder Include="ContinuousDeployment\StoredProcedures" />
+    <Folder Include="Scripts" />
+    <Folder Include="ContinuousDeployment\Tables" />
+    <Folder Include="ContinuousDeployment\Functions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="ContinuousDeployment\StoredProcedures\sp_generate_merge.sql" />
+    <Build Include="ContinuousDeployment\StoredProcedures\sp_execute_cd_script.sql" />
+    <Build Include="ContinuousDeployment\Tables\__MigrationLog.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBAlunos.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBPessoas.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBGeneros.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBEstadoCivil.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBAnoAcademico.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBMeses.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBPagamentos.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBEmolumentosFactores.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBEmolumentos.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBModulos.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBMatriculas.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBContactos.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBContactoParentes.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBContactosTipo.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBDocumentos.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBDocumentosTipos.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBDepartamentos.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBFuncionarios.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBAlunoEmolumentos.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBEmolumentoModulo.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBPagamentoMensalidade.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBMatriculaConfirmacao.sql" />
+    <Build Include="ContinuousDeployment\Functions\uspGerarNMatricula.sql" />
+    <Build Include="ContinuousDeployment\StoredProcedures\uspMatriculaEfectuar.sql" />
+    <Build Include="ContinuousDeployment\StoredProcedures\uspMastriculadosListar.sql" />
+    <Build Include="ContinuousDeployment\StoredProcedures\uspMatriculaConfirmadosListar.sql" />
+    <Build Include="ContinuousDeployment\StoredProcedures\uspEmolumentosModulosListar.sql" />
+    <Build Include="ContinuousDeployment\Tables\TBFormasPagamento.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\Script.PreDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ContinuousDeployment\1.PreDeployment.Updates.sql" />
+    <None Include="ContinuousDeployment\3.PostDeployment.Updates.sql" />
+    <None Include="ContinuousDeployment\2.PostDeployment.StaticTablesList.sql" />
+    <None Include="ContinuousDeployment\StaticTables\StaticTableExample.sql" />
+    <None Include="ALAYSchoolManagmentDb.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="ALAYSchoolManagmentDb.refactorlog" />
+  </ItemGroup>
+</Project>
