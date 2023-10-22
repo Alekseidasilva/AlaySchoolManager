@@ -88,16 +88,16 @@ END
 GO
 -------------------------EMOLUMENTOS MODULOS----------------------------------------
 IF NOT EXISTS(	SELECT 1	FROM dbo.TBEmolumentoModulo) BEGIN
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 1, 1, 500.00, '1', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 2, 2, 250.00, '1', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 3, 1, 10000.45, '1', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 4, 2, 152.74, '1', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 5, 2, 123.81, '1', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 1, 1, 100.80, '2', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 2, 2, 456.97, '2', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 3, 1, 2500.01, '2', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 4, 2, 100.31, '2', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 5, 2, 123.00, '2', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 1, 1, 500.00, '1', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 2, 2, 250.00, '1', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 3, 1, 10000.45, '1', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 4, 2, 152.74, '1', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 5, 2, 123.81, '1', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 1, 1, 100.80, '2', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 2, 2, 456.97, '2', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 3, 1, 2500.01, '2', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 4, 2, 100.31, '2', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 5, 2, 123.00, '2', CONVERT(bit, 'True'))
 END
 
 
