@@ -1,0 +1,42 @@
+
+name: Deploy AWS
+
+on:
+  push:
+    branches:
+    - master
+jobs:
+  build:  
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .Net Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 7.0.402
+    - name: Instalando Dependencias
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name: Test
+      run: dotnet test --no-restore --verbose normal
+
+    - name: Publicando
+      run: dotnet publish -c Release -o '${{github.workspace}}/out'
+
+    - name: Gerando Arquivo Zipado
+      run: |
+         cd '${{github.workspace}}/out'
+         zip -r '${{github.workspace}}/out.zip *'
+
+
+    - name: Implantando no AWS EB
+      uses: einaregilsson/beanstalk-deploy@v21
+      with:
+        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        application_name: ALAYSchoolManagment
+        environment_name: AlaySchool-env
+        version_label: ${{github.sha}}
+        region: us-east-1
+        deployment_package:  ${{github.workspace}}/out.zip
