@@ -15,17 +15,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-Infra", "04-Infra", "{C4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-Tests", "05-Tests", "{3DCA9B63-B6B4-4A28-9587-F1177B35ADA2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManagment.Infra.Data", "src\ALAYSchoolManagment.Infra.Data\ALAYSchoolManagment.Infra.Data.csproj", "{EE67947E-AE4C-4AC4-BA92-135480EC753E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManager.Infra.Data", "src\ALAYSchoolManagment.Infra.Data\ALAYSchoolManager.Infra.Data.csproj", "{EE67947E-AE4C-4AC4-BA92-135480EC753E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManagment.Infra.CrossCutting", "src\ALAYSchoolManagment.Infra.CrossCutting\ALAYSchoolManagment.Infra.CrossCutting.csproj", "{FAD76ACD-0E7D-40DA-AD24-3DB238520627}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManager.Infra.CrossCutting", "src\ALAYSchoolManagment.Infra.CrossCutting\ALAYSchoolManager.Infra.CrossCutting.csproj", "{FAD76ACD-0E7D-40DA-AD24-3DB238520627}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManagment.Domain", "src\ALAYSchoolManagment.Domain\ALAYSchoolManagment.Domain.csproj", "{D9F187E1-99CD-4E4D-8CA8-6C9DDE25789A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManager.Domain", "src\ALAYSchoolManagment.Domain\ALAYSchoolManager.Domain.csproj", "{D9F187E1-99CD-4E4D-8CA8-6C9DDE25789A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManagment.Presentation.IU", "src\ALAYSchoolManagment.IU\ALAYSchoolManagment.Presentation.IU.csproj", "{1FF695D2-AE88-43CC-B638-56140ECC91B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManager.Presentation.IU", "src\ALAYSchoolManagment.IU\ALAYSchoolManager.Presentation.IU.csproj", "{1FF695D2-AE88-43CC-B638-56140ECC91B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManagment.Test", "tests\ALAYSchoolManagment.Test\ALAYSchoolManagment.Test.csproj", "{3B8AD21E-9569-4491-80BF-66C1E80EF9E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManager.Test", "tests\ALAYSchoolManagment.Test\ALAYSchoolManager.Test.csproj", "{3B8AD21E-9569-4491-80BF-66C1E80EF9E6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManagment.Application.AppTest", "tests\ALAYSchoolManagment.Application.AppTest\ALAYSchoolManagment.Application.AppTest.csproj", "{23B31344-71E8-4F3E-B511-907986516CB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManager.Application.AppTest", "tests\ALAYSchoolManagment.Application.AppTest\ALAYSchoolManager.Application.AppTest.csproj", "{23B31344-71E8-4F3E-B511-907986516CB1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1", "4.1", "{FEDECD2E-C9CB-4F59-96AA-B64FC953E17A}"
 EndProject
@@ -33,9 +33,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2", "4.2", "{CB4AD18C-F97
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3", "4.3", "{DA27B338-F54D-4C74-A48F-A86A3814005C}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ALAYSchoolManagmentDb", "Db\ALAYSchoolManagmentDb\ALAYSchoolManagmentDb.sqlproj", "{AB8612AF-AFE9-4997-BC0D-232CCDAF76BF}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ALAYSchoolManagerDb", "Db\ALAYSchoolManagmentDb\ALAYSchoolManagerDb.sqlproj", "{AB8612AF-AFE9-4997-BC0D-232CCDAF76BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALAYSchoolManagment.Application", "src\ALAYSchoolManagment.Application\ALAYSchoolManagment.Application.csproj", "{54A466EA-A760-42E5-B4B3-C8005EA1501A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManager.Application", "src\ALAYSchoolManagment.Application\ALAYSchoolManager.Application.csproj", "{54A466EA-A760-42E5-B4B3-C8005EA1501A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

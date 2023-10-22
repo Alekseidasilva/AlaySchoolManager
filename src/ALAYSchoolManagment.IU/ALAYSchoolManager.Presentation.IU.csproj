@@ -22,10 +22,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\ALAYSchoolManagment.Application\ALAYSchoolManagment.Application.csproj" />
-		<ProjectReference Include="..\ALAYSchoolManagment.Domain\ALAYSchoolManagment.Domain.csproj" />
-		<ProjectReference Include="..\ALAYSchoolManagment.Infra.CrossCutting\ALAYSchoolManagment.Infra.CrossCutting.csproj" />
-		<ProjectReference Include="..\ALAYSchoolManagment.Infra.Data\ALAYSchoolManagment.Infra.Data.csproj" />
+		<ProjectReference Include="..\ALAYSchoolManagment.Application\ALAYSchoolManager.Application.csproj" />
+		<ProjectReference Include="..\ALAYSchoolManagment.Domain\ALAYSchoolManager.Domain.csproj" />
+		<ProjectReference Include="..\ALAYSchoolManagment.Infra.CrossCutting\ALAYSchoolManager.Infra.CrossCutting.csproj" />
+		<ProjectReference Include="..\ALAYSchoolManagment.Infra.Data\ALAYSchoolManager.Infra.Data.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

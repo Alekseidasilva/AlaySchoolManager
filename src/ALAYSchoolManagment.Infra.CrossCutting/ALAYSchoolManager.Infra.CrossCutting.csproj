@@ -12,7 +12,7 @@
 
 	<ItemGroup>
 
-		<ProjectReference Include="..\ALAYSchoolManagment.Infra.Data\ALAYSchoolManagment.Infra.Data.csproj" />
+		<ProjectReference Include="..\ALAYSchoolManagment.Infra.Data\ALAYSchoolManager.Infra.Data.csproj" />
 	</ItemGroup>
 
 </Project>

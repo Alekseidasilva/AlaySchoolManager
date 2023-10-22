@@ -27,7 +27,7 @@
 
 	<ItemGroup>
 
-		<ProjectReference Include="..\ALAYSchoolManagment.Domain\ALAYSchoolManagment.Domain.csproj" />
+		<ProjectReference Include="..\ALAYSchoolManagment.Domain\ALAYSchoolManager.Domain.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>ALAYSchoolManagmentDb</Name>
+    <Name>ALAYSchoolManagerDb</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{ab8612af-afe9-4997-bc0d-232ccdaf76bf}</ProjectGuid>
