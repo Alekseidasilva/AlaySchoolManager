@@ -1,17 +1,19 @@
-﻿@model ALAYSchoolManager.Application.ViewModels.MatriculasViewModel
+﻿@using ALAYSchoolManager.Application.ViewModels
+@model ALAYSchoolManager.Application.ViewModels.MatriculasViewModel
+
 <section>
     <div class="row">
         <div class=" col-8 input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">Nome</span>
             </div>
-            <input asp-for="MatricuAluno.AlunoNomeCompleto" id="txtAlunoNomeCompleto" type="text" class="form-control input-flat" placeholder="Nome completo do aluno">
+            <input asp-for="MatriculaAluno.AlunoNomeCompleto" id="txtAlunoNomeCompleto" type="text" class="form-control input-flat" placeholder="Nome completo do aluno">
         </div>
         <div class=" col input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">Nif</span>
             </div>
-            <input asp-for="MatricuAluno.AlunoContribuinte" type="text" id="txtAlunoContribuinte" class="form-control input-flat" placeholder="Número de Contribuinte">
+            <input asp-for="MatriculaAluno.AlunoContribuinte" type="text" id="txtAlunoContribuinte" class="form-control input-flat" placeholder="Número de Contribuinte">
         </div>
     </div>
     <div class="row">
@@ -19,21 +21,22 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">Nascimento</span>
             </div>
-            <input type="date" asp-for="MatricuAluno.AlunoDataNascimento" class="form-control datepicker" id="txtAlunoDataNascimento" placeholder="Data de Nascimento">
+            <input type="date" asp-for="MatriculaAluno.AlunoDataNascimento" class="form-control datepicker" id="txtAlunoDataNascimento" placeholder="Data de Nascimento">
         </div>
         <div class="col-md-3 mt-2 input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">Genero</span>
             </div>
-            <select asp-for="MatricuAluno.AlunoGenero.GeneroId" asp-items="@ViewBag.Generos" id="selectedAlunoGenero" class="form-control">
+            @* @Html.DropDownListFor(a =>a.MatriculaAluno.AlunoGenero, ) *@
+            @* <select asp-for="MatriculaAluno.AlunoGenero.GeneroId" asp-items="new List<SelectListItem>()" id="selectedAlunoGenero" class="form-control">
                 <option selected="selected" value="0">Selecione...</option>
-            </select>
+            </select> *@
         </div>
         <div class="col-md-3 mt-2 input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">Genero</span>
             </div>
-            <select asp-for="MatricuAluno.AlunoEstadoCivil.EstadoCivilId" asp-items="ViewBag.estadoCivil" id="SelectedAlunoEstadoCivil" class="form-control">
+            <select asp-for="MatriculaAluno.AlunoEstadoCivil.EstadoCivilId" asp-items="ViewBag.estadoCivil" id="SelectedAlunoEstadoCivil" class="form-control">
                 <option value="0" selected="selected">Selecione...</option>
             </select>
         </div>
@@ -41,7 +44,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">Telefone</span>
             </div>
-            <input type="tel" asp-for="MatricuAluno.AlunoDataNascimento" class="form-control" id="txtAlunoTelefone" placeholder="Nº Telefone">
+            <input type="tel" asp-for="MatriculaAluno.AlunoDataNascimento" class="form-control" id="txtAlunoTelefone" placeholder="Nº Telefone">
         </div>
     </div>
     <div class="row mt-2">
@@ -49,7 +52,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">Observações</span>
             </div>
-            <textarea asp-for="MatricuAluno.AlunoObservacao" class="form-control"></textarea>
+            <textarea asp-for="MatriculaAluno.AlunoObservacao" class="form-control"></textarea>
         </div>
     </div>
 </section>

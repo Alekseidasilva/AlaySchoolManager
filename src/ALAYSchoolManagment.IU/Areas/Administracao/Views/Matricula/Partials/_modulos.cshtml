@@ -6,12 +6,12 @@
     <div class="col-2 offset-xl-3">
         <div class="row">
             <div class="card-body card-columns">
-                @foreach (ModulosViewModel item in ViewBag.modulos)
+                @foreach (ModulosViewModel item in Model.MatriculaModulos)
                 {
                     <label class="card-radio-btn">
                         @if (item.ModuloId == 1)
                         {
-                            <input asp-for="MatriculaModuloId" type="radio" name="demo" class="card-input-element d-none" id="ModCreche" value="@item.ModuloId">
+                            @Html.RadioButtonFor(r=>r.MatriculaModuloId,@item.ModuloId,new{ @class = "card-input-element d-none",id="ModCreche"})
                             <div class="card card-body">
                                 <div class="content_head font-weight-bold">@item.ModuloDesignacao</div>
                                 <i class="fa-solid fa-baby" style="font-size: 500%"></i>
@@ -20,8 +20,7 @@
                         }
                         else
                         {
-                            <input asp-for="MatriculaModuloId" type="radio" name="demo" class="card-input-element d-none" id="ModColegio" value="@item.ModuloId">
-
+                            @Html.RadioButtonFor(r=>r.MatriculaModuloId,@item.ModuloId,new{ @class = "card-input-element d-none",id="ModCreche"})
                             <div class="card card-body">
                                 <div class="content_head font-weight-bold">@item.ModuloDesignacao</div>
                                 <i class="fa-solid fa-user-graduate" style="font-size: 500%"></i>
@@ -34,6 +33,3 @@
         </div>
     </div>
 </div>
-
-@Html.RadioButtonFor(model =>model.MatriculaModuloId,"Creche" )
-@Html.RadioButtonFor(model =>model.MatriculaModuloId,"Colegio" )

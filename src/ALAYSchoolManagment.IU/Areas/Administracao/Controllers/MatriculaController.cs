@@ -43,31 +43,37 @@ public class MatriculaController : Controller
         var matriculados = _matriculaApp.ObterTodos();
         return View(matriculados);
     }
+    //[HttpGet]
+    //public IActionResult Matricular()
+    //{
+    //    ViewBag.EmolObrigatorios = _emolumentosModulosApp.ListarObrigatoriosActivos(2);
+    //    ViewBag.EmolOpcionais = _emolumentosModulosApp.ListarOpcionaisActivos(2);
+
+    //    ViewBag.Generos = _generosApp.ObterLista();
+    //    ViewBag.estadoCivil = _estadoCivilApp.ObterLista();
+    //    ViewBag.modulos = _moduloApp.ObterTodos();
+    //    ViewBag.formasPagamentos = _formasPagamentoApp.ObterTodos();
+    //    return View();
+    //}
     [HttpGet]
     public IActionResult Matricular()
     {
-        ViewBag.EmolObrigatorios = _emolumentosModulosApp.ListarObrigatoriosActivos(2);
-        ViewBag.EmolOpcionais = _emolumentosModulosApp.ListarOpcionaisActivos(2);
-
-        ViewBag.Generos = _generosApp.ObterLista();
-        ViewBag.estadoCivil = _estadoCivilApp.ObterLista();
+        MatriculasViewModel mat = new MatriculasViewModel
+        {
+            MatriculaModulos = _moduloApp.ObterTodos(),
+            MatriculaAluno = new AlunosViewModel
+            {
+                Generos = _generosApp.ObterTodos(),
+                EstadoCivil = _estadoCivilApp.ObterTodos()
+            }
+        };
         ViewBag.modulos = _moduloApp.ObterTodos();
-        ViewBag.formasPagamentos = _formasPagamentoApp.ObterTodos();
-        return View();
+
+        return View(mat);
     }
     [HttpPost]
-    public IActionResult Matricular(MatriculasViewModel model)
+    public IActionResult Matricular(MatriculasViewModel matricula)
     {
-        ViewBag.EmolObrigatorios = _emolumentosModulosApp.ListarObrigatoriosActivos(2);
-        ViewBag.EmolOpcionais = _emolumentosModulosApp.ListarOpcionaisActivos(2);
-
-        ViewBag.Generos = _generosApp.ObterLista();
-        ViewBag.estadoCivil = _estadoCivilApp.ObterLista();
-        ViewBag.modulos = _moduloApp.ObterTodos();
-        if (!ModelState.IsValid)
-        {
-            return View(model);
-        }
         return View("Matriculados");
     }
     [HttpGet]

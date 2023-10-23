@@ -44,32 +44,32 @@ public class DomainToViewModels : Profile
         CreateMap<Matriculas, MatriculasViewModel>()
         #region Matricula
         .ForPath(matriVm => matriVm.MatriculaId, opt => opt.MapFrom(matric => matric.Id))
-        .ForPath(matriVm => matriVm.DataHora, opt => opt.MapFrom(matric => matric.MatriculaDataHora))
+        //.ForPath(matriVm => matriVm.DataHora, opt => opt.MapFrom(matric => matric.MatriculaDataHora))
 
         #endregion
         #region Aluno
-        .ForPath(matriVm => matriVm.MatricuAluno.AlunoId, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.Id))
-        .ForPath(matriVm => matriVm.MatricuAluno.AlunoNMatricula, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.AlunoNMatricula))
-        .ForPath(matriVm => matriVm.MatricuAluno.AlunoNomeCompleto, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaNomeCompleto))
-        .ForPath(matriVm => matriVm.MatricuAluno.AlunoContribuinte, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaContribuinte))
-        .ForPath(matriVm => matriVm.MatricuAluno.AlunoDataNascimento, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaDataNascimento))
-        .ForPath(matriVm => matriVm.MatricuAluno.AlunoDataCadastro, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaDataCadastro))
-        .ForPath(matriVm => matriVm.MatricuAluno.AlunoGenero.GeneroId, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaGenero.GeneroId))
-        .ForPath(matriVm => matriVm.MatricuAluno.AlunoGenero.GeneroDesignacao, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaGenero.GeneroDesignacao))
-        .ForPath(matriVm => matriVm.MatricuAluno.AlunoEstadoCivil.EstadoCivilId, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaEstadoCivil.EstadoCivilId))
-        .ForPath(matriVm => matriVm.MatricuAluno.AlunoEstadoCivil.EstadoCivilDesignacao, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaEstadoCivil.EstadoCivilDesignacao))
-        .ForPath(matriVm => matriVm.MatricuAluno.AlunoEstado, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaEstado))
+        //.ForPath(matriVm => matriVm.MatricuAluno.AlunoId, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.Id))
+        //.ForPath(matriVm => matriVm.MatricuAluno.AlunoNMatricula, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.AlunoNMatricula))
+        //.ForPath(matriVm => matriVm.MatricuAluno.AlunoNomeCompleto, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaNomeCompleto))
+        //.ForPath(matriVm => matriVm.MatricuAluno.AlunoContribuinte, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaContribuinte))
+        //.ForPath(matriVm => matriVm.MatricuAluno.AlunoDataNascimento, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaDataNascimento))
+        //.ForPath(matriVm => matriVm.MatricuAluno.AlunoDataCadastro, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaDataCadastro))
+        //.ForPath(matriVm => matriVm.MatricuAluno.AlunoGenero.GeneroId, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaGenero.GeneroId))
+        //.ForPath(matriVm => matriVm.MatricuAluno.AlunoGenero.GeneroDesignacao, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaGenero.GeneroDesignacao))
+        //.ForPath(matriVm => matriVm.MatricuAluno.AlunoEstadoCivil.EstadoCivilId, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaEstadoCivil.EstadoCivilId))
+        //.ForPath(matriVm => matriVm.MatricuAluno.AlunoEstadoCivil.EstadoCivilDesignacao, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaEstadoCivil.EstadoCivilDesignacao))
+        //.ForPath(matriVm => matriVm.MatricuAluno.AlunoEstado, opt => opt.MapFrom(matric => matric.MatriculaAlunoId.PessoaEstado))
         #endregion
         #region Modulo
         .ForPath(matriVm => matriVm.MatriculaModuloId, opt => opt.MapFrom(matric => matric.MatriculaModuloId.ModuloId))
-        .ForPath(matriVm => matriVm.MatriculaModuloDesignacao, opt => opt.MapFrom(matric => matric.MatriculaModuloId.ModuloDesignacao))
+        //.ForPath(matriVm => matriVm.MatriculaModuloDesignacao, opt => opt.MapFrom(matric => matric.MatriculaModuloId.ModuloDesignacao))
         #endregion
         #region AnoAcademico
         //.ForPath(matriVm => matriVm.MatriculaAnoAcademico, opt => opt.MapFrom(matric => matric.MatriculaAnoAcademicoId.AnoAcademicoId))
         //.ForPath(matriVm => matriVm.MatriculaAnoAcademicoDesignacao, opt => opt.MapFrom(matric => matric.MatriculaAnoAcademicoId.AnoAcademicoDesignacao))
         #endregion
         #region Usuario
-        .ForPath(matriVm => matriVm.MatriculaUsuarioId, opt => opt.MapFrom(matric => matric.MatriculaUsuarioId))
+        //.ForPath(matriVm => matriVm.MatriculaUsuarioId, opt => opt.MapFrom(matric => matric.MatriculaUsuarioId))
         #endregion
         ;
         #endregion
