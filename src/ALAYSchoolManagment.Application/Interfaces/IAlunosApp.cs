@@ -1,4 +1,4 @@
-﻿using ALAYSchoolManagment.Application.ViewModels;
+﻿using ALAYSchoolManager.Application.ViewModels;
 
 namespace ALAYSchoolManagment.Application.Interfaces;
 

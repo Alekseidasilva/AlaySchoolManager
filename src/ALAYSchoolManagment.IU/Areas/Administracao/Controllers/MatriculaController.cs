@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Application.Interfaces;
+﻿using ALAYSchoolManager.Application.ViewModels;
+using ALAYSchoolManagment.Application.Interfaces;
 using ALAYSchoolManagment.Application.Interfaces.Shared;
-using ALAYSchoolManagment.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -68,7 +68,7 @@ public class MatriculaController : Controller
         {
             return View(model);
         }
-        return View("MatriculadosListar");
+        return View("Matriculados");
     }
     [HttpGet]
     [Route("/Administracao/Matricula/Detalhes/{alunoNMatricula}")]

@@ -1,5 +1,5 @@
-﻿using ALAYSchoolManagment.Application.ViewModels;
-using ALAYSchoolManagment.Application.ViewModels.Shared;
+﻿using ALAYSchoolManager.Application.ViewModels;
+using ALAYSchoolManager.Application.ViewModels.Shared;
 using ALAYSchoolManagment.Domain.Entidades;
 using ALAYSchoolManagment.Domain.Entidades.Shared;
 using ALAYSchoolManagment.Domain.Entidades.Vo;

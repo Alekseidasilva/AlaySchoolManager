@@ -1,4 +1,4 @@
-﻿namespace ALAYSchoolManagment.Application.ViewModels;
+﻿namespace ALAYSchoolManager.Application.ViewModels;
 
 public class DepartamentosViewModel
 {

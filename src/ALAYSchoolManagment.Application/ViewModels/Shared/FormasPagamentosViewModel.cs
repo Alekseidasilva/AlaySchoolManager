@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ALAYSchoolManagment.Application.ViewModels.Shared;
+﻿namespace ALAYSchoolManager.Application.ViewModels.Shared;
 
 public class FormasPagamentosViewModel
 {

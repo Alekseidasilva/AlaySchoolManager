@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Application.ViewModels.Shared;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using ALAYSchoolManager.Application.ViewModels.Shared;
 
 namespace ALAYSchoolManagment.Presentation.IU.Controllers
 {

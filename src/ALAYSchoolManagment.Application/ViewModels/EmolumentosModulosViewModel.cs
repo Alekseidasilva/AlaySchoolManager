@@ -1,7 +1,7 @@
-﻿using ALAYSchoolManagment.Application.ViewModels.Shared;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using ALAYSchoolManager.Application.ViewModels.Shared;
 
-namespace ALAYSchoolManagment.Application.ViewModels;
+namespace ALAYSchoolManager.Application.ViewModels;
 
 public class EmolumentosModulosViewModel
 {

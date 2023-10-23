@@ -1,7 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-using ALAYSchoolManagment.Application.ViewModels.Shared;
+﻿using ALAYSchoolManager.Application.ViewModels.Shared;
 
-namespace ALAYSchoolManagment.Application.ViewModels;
+namespace ALAYSchoolManager.Application.ViewModels;
 
 public class AlunosViewModel
 {

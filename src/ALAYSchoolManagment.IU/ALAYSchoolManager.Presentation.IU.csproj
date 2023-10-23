@@ -41,7 +41,6 @@
 	<ItemGroup>
 	  <_ContentIncludedByDefault Remove="Areas\Administracao\Views\Matricula\Partials\_emolumentos.cshtml" />
 	  <_ContentIncludedByDefault Remove="Areas\Administracao\Views\Matricula\Partials\_modulos.cshtml" />
-	  <_ContentIncludedByDefault Remove="Areas\Administracao\Views\Matricula\ViewBackupMatricular.cshtml" />
 	  <_ContentIncludedByDefault Remove="Views\Shared\Partials\_footer.cshtml" />
 	  <_ContentIncludedByDefault Remove="Views\Shared\Partials\_menuLeft.cshtml" />
 	</ItemGroup>
@@ -411,10 +410,6 @@
 	  <None Include="wwwroot\js\plugins-init\toastr.init.js" />
 	  <None Include="wwwroot\js\settings.js" />
 	  <None Include="wwwroot\js\styleSwitcher.js" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <UpToDateCheckInput Remove="Areas\Administracao\Views\Matricula\ViewBackupMatricular.cshtml" />
 	</ItemGroup>
 
 </Project>

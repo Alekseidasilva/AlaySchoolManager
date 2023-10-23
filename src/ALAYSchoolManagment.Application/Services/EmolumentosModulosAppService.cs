@@ -1,9 +1,9 @@
 ﻿using ALAYSchoolManagment.Application.Interfaces;
-using ALAYSchoolManagment.Application.ViewModels;
 using ALAYSchoolManagment.Domain.Interfaces.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Linq.Expressions;
+using ALAYSchoolManager.Application.ViewModels;
 
 namespace ALAYSchoolManagment.Application.Services;
 
