@@ -21,7 +21,7 @@ public class FormasPagamentoAppService : IFormasPagamentoApp
     }
     #endregion
     #region Metodos
-    public SelectList ObterLista()
+    public List<SelectListItem> ObterLista()
     {
         throw new NotImplementedException();
     }

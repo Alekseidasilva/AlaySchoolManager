@@ -22,9 +22,10 @@ public class ModulosAppService : IModulosApp
 
     #endregion
     #region Metodos
-    public SelectList ObterLista()
+    public List<SelectListItem> ObterLista()
     {
-        return new SelectList(ObterTodos(), "ModuloId", "ModuloDesignacao");
+        //return new SelectList(ObterTodos(), "ModuloId", "ModuloDesignacao");
+        throw new NotImplementedException();
     }
     public ModulosViewModel ObterPorId(int id)
     {

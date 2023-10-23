@@ -46,19 +46,15 @@ public class MatriculaController : Controller
     [HttpGet]
     public IActionResult Matricular()
     {
-        MatriculasViewModel mat = new MatriculasViewModel();
-        mat.MatriculaModulos = _moduloApp.ObterTodos();
-        mat.MatriculaAluno = new AlunosViewModel();
-        mat.MatriculaAluno.GenerosSelectList = new List<SelectListItem>();
-        mat.MatriculaAluno.EstadosCivilSelectList = new List<SelectListItem>();
-        foreach (var item in _generosApp.ObterTodos())
+        var mat = new MatriculasViewModel
         {
-            mat.MatriculaAluno.GenerosSelectList.Add(new SelectListItem(item.GeneroDesignacao, item.GeneroId.ToString()));
-        }
-        foreach (var item in _estadoCivilApp.ObterTodos())
-        {
-            mat.MatriculaAluno.EstadosCivilSelectList.Add(new SelectListItem(item.EstadoCivilDesignacao, item.EstadoCivilId.ToString()));
-        }
+            MatriculaModulos = _moduloApp.ObterTodos(),
+            MatriculaAluno = new AlunosViewModel
+            {
+                GenerosSelectList = _generosApp.ObterLista(),
+                EstadosCivilSelectList = _estadoCivilApp.ObterLista()
+            }
+        };
         return View(mat);
     }
     [HttpPost]

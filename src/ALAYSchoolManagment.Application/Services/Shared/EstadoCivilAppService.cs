@@ -3,6 +3,8 @@ using ALAYSchoolManager.Application.ViewModels.Shared;
 using ALAYSchoolManagment.Domain.Interfaces.Repository.Shared;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
+using System.Collections.Generic;
 
 namespace ALAYSchoolManager.Application.Services.Shared;
 
@@ -28,9 +30,13 @@ public class EstadoCivilAppService : IEstadoCivilApp
     {
         return _mapper.Map<EstadoCivilViewModel>(_estadoCivilRepository.ObterPorId(id));
     }
-    public SelectList ObterLista()
+    public List<SelectListItem> ObterLista()
     {
-        return new SelectList(ObterTodos(), "EstadoCivilId", "EstadoCivilDesignacao");
+        List<SelectListItem> listItems = new List<SelectListItem>();
+        foreach (var item in ObterTodos())
+            listItems.Add(new SelectListItem(item.EstadoCivilDesignacao, item.EstadoCivilId.ToString()));
+        return listItems;
+
     }
 
     public void Dispose()

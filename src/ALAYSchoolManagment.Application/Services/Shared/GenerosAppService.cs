@@ -31,17 +31,12 @@ public class GenerosAppService : IGenerosApp
         return _mapper.Map<GenerosViewModel>(_generoRepository.ObterPorId(id));
     }
 
-    public SelectList ObterLista()
+    public List<SelectListItem> ObterLista()
     {
-        // var listItem=new List<SelectListItem>();
-        // foreach (var item in ObterTodos())
-        // {
-        //    listItem.Add(new SelectListItem{Text = item.GeneroDesignacao,Value = item.GeneroId.ToString()});
-        // }
-        // //return new SelectList(ObterTodos(), "GeneroId", "GeneroDesignacao");
-        //return listItem;
-        throw new NotImplementedException();
-
+        List<SelectListItem> listItems = new List<SelectListItem>();
+        foreach (var item in ObterTodos())
+            listItems.Add(new SelectListItem(item.GeneroDesignacao, item.GeneroId.ToString()));
+        return listItems;
     }
 
     public void Dispose()
