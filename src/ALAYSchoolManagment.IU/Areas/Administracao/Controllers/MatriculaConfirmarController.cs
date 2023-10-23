@@ -1,5 +1,5 @@
-﻿using ALAYSchoolManager.Application.ViewModels;
-using ALAYSchoolManagment.Application.Interfaces;
+﻿using ALAYSchoolManager.Application.Interfaces;
+using ALAYSchoolManager.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ALAYSchoolManager.Presentation.IU.Areas.Administracao.Controllers

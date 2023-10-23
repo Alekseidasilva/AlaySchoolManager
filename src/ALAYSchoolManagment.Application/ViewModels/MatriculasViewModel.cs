@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using ALAYSchoolManager.Application.ViewModels.Shared;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ALAYSchoolManager.Application.ViewModels;
 
@@ -14,9 +15,6 @@ public class MatriculasViewModel
     [NotMapped]
     public IEnumerable<ModulosViewModel> MatriculaModulos { get; set; }
     #endregion
-
-
-
     #region Aluno
     [Required]
     public AlunosViewModel MatriculaAluno { get; set; }

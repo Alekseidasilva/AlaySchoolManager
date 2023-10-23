@@ -2,8 +2,6 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using ALAYSchoolManagment.Application.Interfaces;
-using ALAYSchoolManagment.Application.Interfaces.Shared;
 using ALAYSchoolManagment.Domain.Entidades.Oldest.Identity;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
@@ -17,6 +15,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using System.Text.Encodings.Web;
+using ALAYSchoolManager.Application.Interfaces;
+using ALAYSchoolManager.Application.Interfaces.Shared;
 
 
 namespace ALAYSchoolManagment.Presentation.IU.Areas.Identity.Pages.Account

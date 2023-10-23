@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace ALAYSchoolManagment.Application.Interfaces.Shared;
+namespace ALAYSchoolManager.Application.Interfaces.Shared;
 
 public interface IBaseShared<TEntidade> : IDisposable where TEntidade : class
 {

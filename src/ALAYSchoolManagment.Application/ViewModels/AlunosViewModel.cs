@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using ALAYSchoolManager.Application.ViewModels.Shared;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ALAYSchoolManager.Application.ViewModels;
 
@@ -16,7 +17,10 @@ public class AlunosViewModel
     [Required]
     public string AlunoNomeCompleto { get; set; }
     [Required]
-    public string? AlunoContribuinte { get; set; }
+    public string AlunoContribuinte { get; set; }
+    [Required]
+    [DataType(DataType.PhoneNumber)]
+    public string AlunoTelefone { get; set; }
     [Required]
     [DataType(DataType.Date)]
     public DateTime AlunoDataNascimento { get; set; }
@@ -33,8 +37,8 @@ public class AlunosViewModel
 
     #region NotMapped
     [NotMapped]
-    public IEnumerable<GenerosViewModel> Generos { get; set; }
+    public List<SelectListItem> GenerosSelectList { get; set; }
     [NotMapped]
-    public IEnumerable<EstadoCivilViewModel> EstadoCivil { get; set; }
+    public List<SelectListItem> EstadosCivilSelectList { get; set; }
     #endregion
 }

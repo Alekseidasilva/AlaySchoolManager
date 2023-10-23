@@ -27,16 +27,16 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">Genero</span>
             </div>
-            @* @Html.DropDownListFor(a =>a.MatriculaAluno.AlunoGenero, ) *@
-            @* <select asp-for="MatriculaAluno.AlunoGenero.GeneroId" asp-items="new List<SelectListItem>()" id="selectedAlunoGenero" class="form-control">
+            <select asp-for="MatriculaAluno.AlunoGenero.GeneroId" asp-items="Model.MatriculaAluno.GenerosSelectList" id="selectedAlunoGenero" class="form-control">
                 <option selected="selected" value="0">Selecione...</option>
-            </select> *@
+            </select>
+
         </div>
         <div class="col-md-3 mt-2 input-group">
             <div class="input-group-prepend">
-                <span class="input-group-text">Genero</span>
+                <span class="input-group-text">Estado Civil</span>
             </div>
-            <select asp-for="MatriculaAluno.AlunoEstadoCivil.EstadoCivilId" asp-items="ViewBag.estadoCivil" id="SelectedAlunoEstadoCivil" class="form-control">
+            <select asp-for="MatriculaAluno.AlunoEstadoCivil.EstadoCivilId" asp-items="Model.MatriculaAluno.EstadosCivilSelectList" id="SelectedAlunoEstadoCivil" class="form-control">
                 <option value="0" selected="selected">Selecione...</option>
             </select>
         </div>
@@ -44,7 +44,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">Telefone</span>
             </div>
-            <input type="tel" asp-for="MatriculaAluno.AlunoDataNascimento" class="form-control" id="txtAlunoTelefone" placeholder="Nº Telefone">
+            <input type="tel" asp-for="MatriculaAluno.AlunoTelefone" class="form-control" id="txtAlunoTelefone" placeholder="Nº Telefone">
         </div>
     </div>
     <div class="row mt-2">

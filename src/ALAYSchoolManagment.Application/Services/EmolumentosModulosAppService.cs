@@ -1,11 +1,11 @@
-﻿using ALAYSchoolManagment.Application.Interfaces;
+﻿using System.Linq.Expressions;
+using ALAYSchoolManager.Application.Interfaces;
+using ALAYSchoolManager.Application.ViewModels;
 using ALAYSchoolManagment.Domain.Interfaces.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Linq.Expressions;
-using ALAYSchoolManager.Application.ViewModels;
 
-namespace ALAYSchoolManagment.Application.Services;
+namespace ALAYSchoolManager.Application.Services;
 
 public class EmolumentosModulosAppService : IEmolumentosModulosApp
 {

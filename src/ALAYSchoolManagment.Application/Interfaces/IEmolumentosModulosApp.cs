@@ -1,6 +1,6 @@
 ﻿using ALAYSchoolManager.Application.ViewModels;
 
-namespace ALAYSchoolManagment.Application.Interfaces;
+namespace ALAYSchoolManager.Application.Interfaces;
 
 public interface IEmolumentosModulosApp : IBaseApp<EmolumentosModulosViewModel>
 {

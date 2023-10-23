@@ -5,7 +5,7 @@ using ALAYSchoolManagment.Domain.Entidades.Shared;
 using ALAYSchoolManagment.Domain.Entidades.Vo;
 using AutoMapper;
 
-namespace ALAYSchoolManagment.Application.AutoMapper;
+namespace ALAYSchoolManager.Application.AutoMapper;
 
 public class ViewModelsToDomain : Profile
 {

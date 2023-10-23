@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManager.Application.ViewModels;
-using ALAYSchoolManagment.Application.Interfaces;
-using ALAYSchoolManagment.Application.Interfaces.Shared;
+﻿using ALAYSchoolManager.Application.Interfaces;
+using ALAYSchoolManager.Application.Interfaces.Shared;
+using ALAYSchoolManager.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -43,38 +43,28 @@ public class MatriculaController : Controller
         var matriculados = _matriculaApp.ObterTodos();
         return View(matriculados);
     }
-    //[HttpGet]
-    //public IActionResult Matricular()
-    //{
-    //    ViewBag.EmolObrigatorios = _emolumentosModulosApp.ListarObrigatoriosActivos(2);
-    //    ViewBag.EmolOpcionais = _emolumentosModulosApp.ListarOpcionaisActivos(2);
-
-    //    ViewBag.Generos = _generosApp.ObterLista();
-    //    ViewBag.estadoCivil = _estadoCivilApp.ObterLista();
-    //    ViewBag.modulos = _moduloApp.ObterTodos();
-    //    ViewBag.formasPagamentos = _formasPagamentoApp.ObterTodos();
-    //    return View();
-    //}
     [HttpGet]
     public IActionResult Matricular()
     {
-        MatriculasViewModel mat = new MatriculasViewModel
+        MatriculasViewModel mat = new MatriculasViewModel();
+        mat.MatriculaModulos = _moduloApp.ObterTodos();
+        mat.MatriculaAluno = new AlunosViewModel();
+        mat.MatriculaAluno.GenerosSelectList = new List<SelectListItem>();
+        mat.MatriculaAluno.EstadosCivilSelectList = new List<SelectListItem>();
+        foreach (var item in _generosApp.ObterTodos())
         {
-            MatriculaModulos = _moduloApp.ObterTodos(),
-            MatriculaAluno = new AlunosViewModel
-            {
-                Generos = _generosApp.ObterTodos(),
-                EstadoCivil = _estadoCivilApp.ObterTodos()
-            }
-        };
-        ViewBag.modulos = _moduloApp.ObterTodos();
-
+            mat.MatriculaAluno.GenerosSelectList.Add(new SelectListItem(item.GeneroDesignacao, item.GeneroId.ToString()));
+        }
+        foreach (var item in _estadoCivilApp.ObterTodos())
+        {
+            mat.MatriculaAluno.EstadosCivilSelectList.Add(new SelectListItem(item.EstadoCivilDesignacao, item.EstadoCivilId.ToString()));
+        }
         return View(mat);
     }
     [HttpPost]
     public IActionResult Matricular(MatriculasViewModel matricula)
     {
-        return View("Matriculados");
+        return View(matricula);
     }
     [HttpGet]
     [Route("/Administracao/Matricula/Detalhes/{alunoNMatricula}")]

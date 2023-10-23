@@ -1,12 +1,12 @@
-﻿using ALAYSchoolManagment.Application.Interfaces;
+﻿using System.Linq.Expressions;
+using ALAYSchoolManager.Application.Interfaces;
+using ALAYSchoolManager.Application.ViewModels;
 using ALAYSchoolManagment.Domain.Entidades;
 using ALAYSchoolManagment.Domain.Interfaces.Services;
 using ALAYSchoolManagment.Infra.Data.Interfaces;
-using System.Linq.Expressions;
-using ALAYSchoolManager.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace ALAYSchoolManagment.Application.Services;
+namespace ALAYSchoolManager.Application.Services;
 
 public class FuncionariosAppService : IFuncionariosApp
 {

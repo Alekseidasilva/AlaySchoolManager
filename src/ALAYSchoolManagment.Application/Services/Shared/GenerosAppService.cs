@@ -1,10 +1,10 @@
-﻿using ALAYSchoolManager.Application.ViewModels.Shared;
-using ALAYSchoolManagment.Application.Interfaces.Shared;
+﻿using ALAYSchoolManager.Application.Interfaces.Shared;
+using ALAYSchoolManager.Application.ViewModels.Shared;
 using ALAYSchoolManagment.Domain.Interfaces.Repository.Shared;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace ALAYSchoolManagment.Application.Services.Shared;
+namespace ALAYSchoolManager.Application.Services.Shared;
 
 public class GenerosAppService : IGenerosApp
 {
@@ -33,7 +33,15 @@ public class GenerosAppService : IGenerosApp
 
     public SelectList ObterLista()
     {
-        return new SelectList(ObterTodos(), "GeneroId", "GeneroDesignacao");
+        // var listItem=new List<SelectListItem>();
+        // foreach (var item in ObterTodos())
+        // {
+        //    listItem.Add(new SelectListItem{Text = item.GeneroDesignacao,Value = item.GeneroId.ToString()});
+        // }
+        // //return new SelectList(ObterTodos(), "GeneroId", "GeneroDesignacao");
+        //return listItem;
+        throw new NotImplementedException();
+
     }
 
     public void Dispose()

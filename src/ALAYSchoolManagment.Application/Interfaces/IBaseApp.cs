@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace ALAYSchoolManagment.Application.Interfaces;
+namespace ALAYSchoolManager.Application.Interfaces;
 
 public interface IBaseApp<TEntidade> : IDisposable where TEntidade : class
 {

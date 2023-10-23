@@ -1,8 +1,8 @@
-using ALAYSchoolManagment.Application.AutoMapper;
-using ALAYSchoolManagment.Application.Interfaces;
-using ALAYSchoolManagment.Application.Interfaces.Shared;
-using ALAYSchoolManagment.Application.Services;
-using ALAYSchoolManagment.Application.Services.Shared;
+using ALAYSchoolManager.Application.AutoMapper;
+using ALAYSchoolManager.Application.Interfaces;
+using ALAYSchoolManager.Application.Interfaces.Shared;
+using ALAYSchoolManager.Application.Services;
+using ALAYSchoolManager.Application.Services.Shared;
 using ALAYSchoolManagment.Domain.Entidades;
 using ALAYSchoolManagment.Domain.Interfaces.Repository;
 using ALAYSchoolManagment.Domain.Interfaces.Repository.Shared;

@@ -1,13 +1,10 @@
-﻿
-
+﻿using ALAYSchoolManager.Application.Interfaces.Shared;
 using ALAYSchoolManager.Application.ViewModels.Shared;
-using ALAYSchoolManagment.Application.Interfaces.Shared;
 using ALAYSchoolManagment.Domain.Interfaces.Repository.Shared;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-
-namespace ALAYSchoolManagment.Application.Services.Shared;
+namespace ALAYSchoolManager.Application.Services.Shared;
 
 public class EstadoCivilAppService : IEstadoCivilApp
 {
