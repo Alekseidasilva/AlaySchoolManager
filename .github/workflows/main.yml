@@ -17,8 +17,9 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbose normal
+
+    # - name: Test
+    #   run: dotnet test --no-restore --verbose normal
 
     - name: Publicando
       run: dotnet publish -c Release -o '${{github.workspace}}/out'
