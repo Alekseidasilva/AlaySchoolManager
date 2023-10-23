@@ -2,7 +2,7 @@
 using ALAYSchoolManagment.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ALAYSchoolManagment.Presentation.IU.Areas.Administracao.Controllers
+namespace ALAYSchoolManager.Presentation.IU.Areas.Administracao.Controllers
 {
     [Area("Administracao")]
     public class MatriculaConfirmarController : Controller

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ALAYSchoolManagment.Presentation.IU.Areas.Administracao.Controllers
+namespace ALAYSchoolManager.Presentation.IU.Areas.Administracao.Controllers
 {
 
     public class UsuarioController : Controller

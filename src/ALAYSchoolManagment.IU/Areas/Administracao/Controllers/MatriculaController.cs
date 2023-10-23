@@ -1,12 +1,10 @@
-﻿
-using ALAYSchoolManagment.Application.Interfaces;
+﻿using ALAYSchoolManagment.Application.Interfaces;
 using ALAYSchoolManagment.Application.Interfaces.Shared;
 using ALAYSchoolManagment.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-
-namespace ALAYSchoolManagment.Presentation.IU.Areas.Administracao.Controllers;
+namespace ALAYSchoolManager.Presentation.IU.Areas.Administracao.Controllers;
 
 [Area("Administracao")]
 public class MatriculaController : Controller
