@@ -8,15 +8,15 @@ namespace ALAYSchoolManagment.Test.DomainTest.Services.Shared;
 public class ModulosTest
 {
     #region Variaveis
-
+    private readonly IModulosService _modulosService;
 
     #endregion
     #region Construtores
-    //public ModulosTest(IModulosService modulosService)
-    //{
-    //    _modulosService = modulosService;
+    public ModulosTest(IModulosService modulosService)
+    {
+        _modulosService = modulosService;
 
-    //}
+    }
     #endregion
     #region Metodos
     [TestMethod]
@@ -24,14 +24,11 @@ public class ModulosTest
     {
 
         //Arange
-
         Mock<IModulosService> mockModuloService = new Mock<IModulosService>();
         mockModuloService.Setup(a => a.ObterPorId(It.IsAny<int>())).Returns(ModuloMock);
 
-
         //Act
-        //  var res = _modulosService.ObterPorId(1);
-
+        var res = _modulosService.ObterPorId(1);
 
         //Assert
         Assert.AreEqual(1, 1);
