@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Vo;
+﻿using ALAYSchoolManager.Domain.Entidades.Vo;
 
-namespace ALAYSchoolManagment.Domain.Interfaces.Services.Shared;
+namespace ALAYSchoolManager.Domain.Interfaces.Services.Shared;
 
 public interface IEstadoCivilService : IBaseSharedService<EstadoCivilVo>
 {

@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Oldest.Shared;
+﻿using ALAYSchoolManager.Domain.Entidades.Oldest.Shared;
 
-namespace ALAYSchoolManagment.Domain.Entidades.Vo;
+namespace ALAYSchoolManager.Domain.Entidades.Vo;
 
 public class RuaVo
 {

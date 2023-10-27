@@ -1,8 +1,8 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using System.Data;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using System.Data;
 
-namespace ALAYSchoolManagment.Infra.Data.AdoNet;
+namespace ALAYSchoolManager.Infra.Data.AdoNet;
 
 public class SQLServer
 {

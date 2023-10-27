@@ -1,4 +1,4 @@
-﻿namespace ALAYSchoolManagment.Domain.Interfaces.Services;
+﻿namespace ALAYSchoolManager.Domain.Interfaces.Services;
 
 public interface IBaseService<TEntidade> : IDisposable where TEntidade : class
 {

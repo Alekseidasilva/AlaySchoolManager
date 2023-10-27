@@ -1,4 +1,4 @@
-﻿namespace ALAYSchoolManagment.Domain.Entidades
+﻿namespace ALAYSchoolManager.Domain.Entidades
 {
     public class AlunoEmolumentos
     {

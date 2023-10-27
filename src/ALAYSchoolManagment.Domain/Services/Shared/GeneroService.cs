@@ -1,8 +1,8 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Vo;
-using ALAYSchoolManagment.Domain.Interfaces.Repository.Shared;
-using ALAYSchoolManagment.Domain.Interfaces.Services.Shared;
+﻿using ALAYSchoolManager.Domain.Entidades.Vo;
+using ALAYSchoolManager.Domain.Interfaces.Repository.Shared;
+using ALAYSchoolManager.Domain.Interfaces.Services.Shared;
 
-namespace ALAYSchoolManagment.Domain.Services.Shared;
+namespace ALAYSchoolManager.Domain.Services.Shared;
 
 public class GeneroService : IGeneroService
 {

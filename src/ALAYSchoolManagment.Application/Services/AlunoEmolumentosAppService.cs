@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
 using ALAYSchoolManager.Application.Interfaces;
 using ALAYSchoolManager.Application.ViewModels;
-using ALAYSchoolManagment.Domain.Interfaces.Repository.Shared;
+using ALAYSchoolManager.Domain.Interfaces.Repository.Shared;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc.Rendering;
 

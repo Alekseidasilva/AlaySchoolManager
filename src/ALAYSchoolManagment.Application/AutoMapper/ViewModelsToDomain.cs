@@ -1,8 +1,8 @@
 ﻿using ALAYSchoolManager.Application.ViewModels;
 using ALAYSchoolManager.Application.ViewModels.Shared;
-using ALAYSchoolManagment.Domain.Entidades;
-using ALAYSchoolManagment.Domain.Entidades.Shared;
-using ALAYSchoolManagment.Domain.Entidades.Vo;
+using ALAYSchoolManager.Domain.Entidades;
+using ALAYSchoolManager.Domain.Entidades.Shared;
+using ALAYSchoolManager.Domain.Entidades.Vo;
 using AutoMapper;
 
 namespace ALAYSchoolManager.Application.AutoMapper;

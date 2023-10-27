@@ -1,4 +1,4 @@
-﻿namespace ALAYSchoolManagment.Infra.Data.Interfaces;
+﻿namespace ALAYSchoolManager.Infra.Data.Interfaces;
 
 public interface IUnitOfWork
 {

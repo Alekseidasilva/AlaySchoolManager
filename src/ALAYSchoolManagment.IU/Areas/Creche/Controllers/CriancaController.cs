@@ -3,7 +3,7 @@ using ALAYSchoolManager.Application.Interfaces.Shared;
 using ALAYSchoolManager.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ALAYSchoolManagment.Presentation.IU.Areas.Creche.Controllers
+namespace ALAYSchoolManager.Presentation.IU.Areas.Creche.Controllers
 {
     [Area("Creche")]
     public class CriancaController : Controller

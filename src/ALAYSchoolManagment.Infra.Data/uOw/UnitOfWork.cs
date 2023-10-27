@@ -1,7 +1,7 @@
-﻿using ALAYSchoolManagment.Infra.Data.Context;
-using ALAYSchoolManagment.Infra.Data.Interfaces;
+﻿using ALAYSchoolManager.Infra.Data.Context;
+using ALAYSchoolManager.Infra.Data.Interfaces;
 
-namespace ALAYSchoolManagment.Infra.Data.uOw;
+namespace ALAYSchoolManager.Infra.Data.uOw;
 
 public class UnitOfWork : IUnitOfWork
 {

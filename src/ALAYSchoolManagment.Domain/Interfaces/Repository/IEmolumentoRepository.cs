@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Domain.Entidades;
+﻿using ALAYSchoolManager.Domain.Entidades;
 
-namespace ALAYSchoolManagment.Domain.Interfaces.Repository
+namespace ALAYSchoolManager.Domain.Interfaces.Repository
 {
     public interface IEmolumentoRepository : IBaseRepository<Emolumentos>
     {

@@ -1,4 +1,4 @@
-﻿namespace ALAYSchoolManagment.Domain.Interfaces.Repository.Identity;
+﻿namespace ALAYSchoolManager.Domain.Interfaces.Repository.Identity;
 
 public interface IUsuarioRepository<TEntidade> where TEntidade : class
 {

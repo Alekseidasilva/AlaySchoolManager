@@ -1,8 +1,8 @@
-﻿using ALAYSchoolManagment.Domain.Entidades;
+﻿using ALAYSchoolManager.Domain.Entidades;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ALAYSchoolManagment.Infra.Data.Mappings;
+namespace ALAYSchoolManager.Infra.Data.Mappings;
 
 public class MatriculaConfirmarMapping : IEntityTypeConfiguration<MatriculaConfirmar>
 {

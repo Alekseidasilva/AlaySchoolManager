@@ -1,4 +1,4 @@
-namespace ALAYSchoolManagment.Application.AppTest
+namespace ALAYSchoolManager.Application.AppTest
 {
     public class UnitTest1
     {

@@ -1,4 +1,4 @@
-﻿namespace ALAYSchoolManagment.Domain.Entidades.Oldest.Shared
+﻿namespace ALAYSchoolManager.Domain.Entidades.Oldest.Shared
 {
     public class Provincias
     {

@@ -1,7 +1,7 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Oldest.Shared;
-using ALAYSchoolManagment.Domain.Entidades.Shared;
+﻿using ALAYSchoolManager.Domain.Entidades.Oldest.Shared;
+using ALAYSchoolManager.Domain.Entidades.Shared;
 
-namespace ALAYSchoolManagment.Domain.Entidades;
+namespace ALAYSchoolManager.Domain.Entidades;
 
 public class Contactos : EntidadeBase
 {

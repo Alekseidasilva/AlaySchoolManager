@@ -1,4 +1,4 @@
-﻿namespace ALAYSchoolManagment.Domain.Interfaces.Services.Identity;
+﻿namespace ALAYSchoolManager.Domain.Interfaces.Services.Identity;
 
 public interface IUsuarioService<TEntidade> : IDisposable where TEntidade : class
 {

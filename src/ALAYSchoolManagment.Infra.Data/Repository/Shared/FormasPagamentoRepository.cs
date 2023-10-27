@@ -1,8 +1,8 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Shared;
-using ALAYSchoolManagment.Domain.Interfaces.Repository.Shared;
-using ALAYSchoolManagment.Infra.Data.Context;
+﻿using ALAYSchoolManager.Domain.Entidades.Shared;
+using ALAYSchoolManager.Domain.Interfaces.Repository.Shared;
+using ALAYSchoolManager.Infra.Data.Context;
 
-namespace ALAYSchoolManagment.Infra.Data.Repository.Shared;
+namespace ALAYSchoolManager.Infra.Data.Repository.Shared;
 
 public class FormasPagamentoRepository : BaseSharedRepository<FormasPagamentos>, IFormasPagamentoRepository
 {

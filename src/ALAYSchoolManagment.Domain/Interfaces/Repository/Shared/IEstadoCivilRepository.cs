@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Vo;
+﻿using ALAYSchoolManager.Domain.Entidades.Vo;
 
-namespace ALAYSchoolManagment.Domain.Interfaces.Repository.Shared;
+namespace ALAYSchoolManager.Domain.Interfaces.Repository.Shared;
 
 public interface IEstadoCivilRepository : IBaseSharedRepository<EstadoCivilVo>
 {

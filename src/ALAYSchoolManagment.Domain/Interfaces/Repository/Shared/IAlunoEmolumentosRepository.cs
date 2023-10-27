@@ -1,8 +1,8 @@
 ﻿
 
-using ALAYSchoolManagment.Domain.Entidades;
+using ALAYSchoolManager.Domain.Entidades;
 
-namespace ALAYSchoolManagment.Domain.Interfaces.Repository.Shared
+namespace ALAYSchoolManager.Domain.Interfaces.Repository.Shared
 {
     public interface IAlunoEmolumentosRepository : IBaseSharedRepository<AlunoEmolumentos>
     {

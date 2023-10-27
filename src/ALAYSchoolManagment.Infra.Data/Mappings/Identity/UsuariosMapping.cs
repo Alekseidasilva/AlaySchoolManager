@@ -1,8 +1,8 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Oldest.Identity;
+﻿using ALAYSchoolManager.Domain.Entidades.Oldest.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ALAYSchoolManagment.Infra.Data.Mappings.Identity;
+namespace ALAYSchoolManager.Infra.Data.Mappings.Identity;
 
 public class UsuariosMapping : IEntityTypeConfiguration<Usuario>
 {

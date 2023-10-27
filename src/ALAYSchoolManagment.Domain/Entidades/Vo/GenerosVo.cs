@@ -1,4 +1,4 @@
-﻿namespace ALAYSchoolManagment.Domain.Entidades.Vo
+﻿namespace ALAYSchoolManager.Domain.Entidades.Vo
 {
     public class GenerosVo
     {

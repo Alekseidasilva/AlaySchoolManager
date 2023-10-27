@@ -1,4 +1,4 @@
-﻿namespace ALAYSchoolManagment.Domain.Interfaces.Repository.Shared;
+﻿namespace ALAYSchoolManager.Domain.Interfaces.Repository.Shared;
 
 public interface IBaseSharedRepository<TEntidade> : IDisposable where TEntidade : class
 {

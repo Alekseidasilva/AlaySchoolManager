@@ -1,4 +1,4 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Oldest.Identity;
+﻿using ALAYSchoolManager.Domain.Entidades.Oldest.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 

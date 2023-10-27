@@ -1,8 +1,8 @@
-﻿using ALAYSchoolManagment.Infra.Data.AdoNet;
-using ALAYSchoolManagment.Infra.Data.Context;
+﻿using ALAYSchoolManager.Infra.Data.AdoNet;
+using ALAYSchoolManager.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace ALAYSchoolManagment.Infra.Data.Repository.Shared;
+namespace ALAYSchoolManager.Infra.Data.Repository.Shared;
 
 public class BaseSharedRepository<TEntidade> : IDisposable where TEntidade : class
 {

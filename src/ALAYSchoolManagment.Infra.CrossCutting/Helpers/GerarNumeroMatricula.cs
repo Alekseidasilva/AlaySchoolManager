@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Infra.Data.Context;
+﻿using ALAYSchoolManager.Infra.Data.Context;
 
-namespace ALAYSchoolManagment.Infra.CrossCutting.Helpers;
+namespace ALAYSchoolManager.Infra.CrossCutting.Helpers;
 
 public static class GerarNumeroMatricula
 {

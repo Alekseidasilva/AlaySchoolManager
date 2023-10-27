@@ -2,7 +2,13 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using ALAYSchoolManagment.Domain.Entidades.Oldest.Identity;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
+using System.Text.Encodings.Web;
+using ALAYSchoolManager.Application.Interfaces;
+using ALAYSchoolManager.Application.Interfaces.Shared;
+using ALAYSchoolManager.Domain.Entidades.Oldest.Identity;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -11,15 +17,8 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
-using System.Text.Encodings.Web;
-using ALAYSchoolManager.Application.Interfaces;
-using ALAYSchoolManager.Application.Interfaces.Shared;
 
-
-namespace ALAYSchoolManagment.Presentation.IU.Areas.Identity.Pages.Account
+namespace ALAYSchoolManager.Presentation.IU.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {

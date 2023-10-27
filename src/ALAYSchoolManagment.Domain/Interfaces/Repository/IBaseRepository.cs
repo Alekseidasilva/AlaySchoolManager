@@ -1,7 +1,7 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Shared;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
+using ALAYSchoolManager.Domain.Entidades.Shared;
 
-namespace ALAYSchoolManagment.Domain.Interfaces.Repository;
+namespace ALAYSchoolManager.Domain.Interfaces.Repository;
 
 public interface IBaseRepository<TEntidade> : IDisposable where TEntidade : EntidadeBase
 {

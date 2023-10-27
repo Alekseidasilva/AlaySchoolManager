@@ -1,8 +1,8 @@
-﻿using ALAYSchoolManagment.Domain.Entidades;
-using ALAYSchoolManagment.Domain.Interfaces.Repository;
-using ALAYSchoolManagment.Domain.Interfaces.Services;
+﻿using ALAYSchoolManager.Domain.Entidades;
+using ALAYSchoolManager.Domain.Interfaces.Repository;
+using ALAYSchoolManager.Domain.Interfaces.Services;
 
-namespace ALAYSchoolManagment.Domain.Services
+namespace ALAYSchoolManager.Domain.Services
 {
     public class PagamentosService : IPagamentosService
     {

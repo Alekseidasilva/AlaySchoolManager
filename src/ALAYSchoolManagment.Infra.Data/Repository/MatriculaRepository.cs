@@ -1,11 +1,11 @@
-﻿using ALAYSchoolManagment.Domain.Entidades;
-using ALAYSchoolManagment.Domain.Entidades.Shared;
-using ALAYSchoolManagment.Domain.Interfaces.Repository;
-using ALAYSchoolManagment.Infra.Data.Context;
-using ALAYSchoolManagment.Infra.Data.Repository.Shared;
-using System.Data;
+﻿using System.Data;
+using ALAYSchoolManager.Domain.Entidades;
+using ALAYSchoolManager.Domain.Entidades.Shared;
+using ALAYSchoolManager.Domain.Interfaces.Repository;
+using ALAYSchoolManager.Infra.Data.Context;
+using ALAYSchoolManager.Infra.Data.Repository.Shared;
 
-namespace ALAYSchoolManagment.Infra.Data.Repository;
+namespace ALAYSchoolManager.Infra.Data.Repository;
 
 public class MatriculaRepository : BaseSharedRepository<Matriculas>, IMatriculaRepository
 {

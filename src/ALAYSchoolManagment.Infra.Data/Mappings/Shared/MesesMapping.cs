@@ -1,8 +1,8 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Shared;
+﻿using ALAYSchoolManager.Domain.Entidades.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ALAYSchoolManagment.Infra.Data.Mappings.Shared;
+namespace ALAYSchoolManager.Infra.Data.Mappings.Shared;
 
 public class MesesMapping : IEntityTypeConfiguration<Meses>
 {

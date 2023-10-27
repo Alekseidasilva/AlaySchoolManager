@@ -2,13 +2,13 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.ComponentModel.DataAnnotations;
 
-namespace ALAYSchoolManagment.Presentation.IU.Areas.Identity.Pages.Account
+namespace ALAYSchoolManager.Presentation.IU.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
     {

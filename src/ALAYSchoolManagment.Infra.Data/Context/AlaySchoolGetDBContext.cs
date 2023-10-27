@@ -1,15 +1,15 @@
-﻿using ALAYSchoolManagment.Domain.Entidades;
-using ALAYSchoolManagment.Domain.Entidades.Oldest.Identity;
-using ALAYSchoolManagment.Domain.Entidades.Oldest.Shared;
-using ALAYSchoolManagment.Domain.Entidades.Shared;
-using ALAYSchoolManagment.Domain.Entidades.Vo;
-using ALAYSchoolManagment.Infra.Data.Mappings.Shared;
+﻿using ALAYSchoolManager.Domain.Entidades;
+using ALAYSchoolManager.Domain.Entidades.Oldest.Identity;
+using ALAYSchoolManager.Domain.Entidades.Oldest.Shared;
+using ALAYSchoolManager.Domain.Entidades.Shared;
+using ALAYSchoolManager.Domain.Entidades.Vo;
+using ALAYSchoolManager.Infra.Data.Mappings.Shared;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace ALAYSchoolManagment.Infra.Data.Context
+namespace ALAYSchoolManager.Infra.Data.Context
 {
     public class AlaySchoolGetDbContext : IdentityDbContext<IdentityUser>
     {

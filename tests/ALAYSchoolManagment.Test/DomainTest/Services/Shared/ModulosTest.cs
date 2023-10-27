@@ -1,8 +1,8 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Shared;
-using ALAYSchoolManagment.Domain.Interfaces.Services.Shared;
+﻿using ALAYSchoolManager.Domain.Entidades.Shared;
+using ALAYSchoolManager.Domain.Interfaces.Services.Shared;
 using Moq;
 
-namespace ALAYSchoolManagment.Test.DomainTest.Services.Shared;
+namespace ALAYSchoolManager.Test.DomainTest.Services.Shared;
 
 [TestClass]
 public class ModulosTest

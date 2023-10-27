@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Shared;
+﻿using ALAYSchoolManager.Domain.Entidades.Shared;
 
-namespace ALAYSchoolManagment.Domain.Interfaces.Repository.Shared;
+namespace ALAYSchoolManager.Domain.Interfaces.Repository.Shared;
 
 public interface IModuloRepository : IBaseSharedRepository<Modulos>
 {

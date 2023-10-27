@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Domain.Services;
+﻿using ALAYSchoolManager.Domain.Services;
 
-namespace ALAYSchoolManagment.Domain.Interfaces.Services
+namespace ALAYSchoolManager.Domain.Interfaces.Services
 {
     public interface IPagamentoMensalidadeService : IBaseService<PagamentoMensalidadeService>
     {

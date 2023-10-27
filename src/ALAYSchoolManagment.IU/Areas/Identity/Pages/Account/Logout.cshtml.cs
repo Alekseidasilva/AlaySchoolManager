@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ALAYSchoolManagment.Presentation.IU.Areas.Identity.Pages.Account
+namespace ALAYSchoolManager.Presentation.IU.Areas.Identity.Pages.Account
 {
     public class LogoutModel : PageModel
     {

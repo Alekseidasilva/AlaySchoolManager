@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace ALAYSchoolManagment.Infra.CrossCutting.Extensions;
+namespace ALAYSchoolManager.Infra.CrossCutting.Extensions;
 
 public static class DecimalExtensions
 {

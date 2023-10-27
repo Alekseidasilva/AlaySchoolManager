@@ -3,7 +3,7 @@ using ALAYSchoolManager.Application.Interfaces.Shared;
 using ALAYSchoolManager.Application.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ALAYSchoolManagment.Presentation.IU.Areas.Colegio.Controllers
+namespace ALAYSchoolManager.Presentation.IU.Areas.Colegio.Controllers
 {
     [Area("Colegio")]
     public class AlunoColegioController : Controller

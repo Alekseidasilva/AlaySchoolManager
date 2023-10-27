@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Shared;
+﻿using ALAYSchoolManager.Domain.Entidades.Shared;
 
-namespace ALAYSchoolManagment.Domain.Entidades;
+namespace ALAYSchoolManager.Domain.Entidades;
 
 public class Aluno : Pessoa
 {

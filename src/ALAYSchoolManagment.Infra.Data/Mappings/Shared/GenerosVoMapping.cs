@@ -1,8 +1,8 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Vo;
+﻿using ALAYSchoolManager.Domain.Entidades.Vo;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ALAYSchoolManagment.Infra.Data.Mappings.Shared;
+namespace ALAYSchoolManager.Infra.Data.Mappings.Shared;
 
 public class GenerosVoMapping : IEntityTypeConfiguration<GenerosVo>
 {

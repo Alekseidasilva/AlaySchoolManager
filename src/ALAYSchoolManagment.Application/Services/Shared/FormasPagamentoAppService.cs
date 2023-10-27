@@ -1,6 +1,6 @@
 ﻿using ALAYSchoolManager.Application.Interfaces.Shared;
 using ALAYSchoolManager.Application.ViewModels.Shared;
-using ALAYSchoolManagment.Domain.Interfaces.Services.Shared;
+using ALAYSchoolManager.Domain.Interfaces.Services.Shared;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc.Rendering;
 

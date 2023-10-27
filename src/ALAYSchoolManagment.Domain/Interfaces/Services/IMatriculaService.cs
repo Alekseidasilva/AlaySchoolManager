@@ -1,7 +1,7 @@
-﻿using ALAYSchoolManagment.Domain.Entidades;
-using ALAYSchoolManagment.Domain.Interfaces.Services.Shared;
+﻿using ALAYSchoolManager.Domain.Entidades;
+using ALAYSchoolManager.Domain.Interfaces.Services.Shared;
 
-namespace ALAYSchoolManagment.Domain.Interfaces.Services;
+namespace ALAYSchoolManager.Domain.Interfaces.Services;
 
 public interface IMatriculaService : IBaseSharedService<Matriculas>
 {

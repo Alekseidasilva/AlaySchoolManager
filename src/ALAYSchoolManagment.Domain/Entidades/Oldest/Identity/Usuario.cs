@@ -1,4 +1,4 @@
-﻿namespace ALAYSchoolManagment.Domain.Entidades.Oldest.Identity;
+﻿namespace ALAYSchoolManager.Domain.Entidades.Oldest.Identity;
 
 public class Usuario
 {

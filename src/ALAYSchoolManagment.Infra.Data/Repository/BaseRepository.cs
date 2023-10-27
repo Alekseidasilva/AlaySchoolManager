@@ -1,11 +1,11 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Shared;
-using ALAYSchoolManagment.Domain.Interfaces.Repository;
-using ALAYSchoolManagment.Infra.Data.AdoNet;
-using ALAYSchoolManagment.Infra.Data.Context;
+﻿using System.Linq.Expressions;
+using ALAYSchoolManager.Domain.Entidades.Shared;
+using ALAYSchoolManager.Domain.Interfaces.Repository;
+using ALAYSchoolManager.Infra.Data.AdoNet;
+using ALAYSchoolManager.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
 
-namespace ALAYSchoolManagment.Infra.Data.Repository;
+namespace ALAYSchoolManager.Infra.Data.Repository;
 
 public class BaseRepository<TEntidade> : IBaseRepository<TEntidade> where TEntidade : EntidadeBase
 {

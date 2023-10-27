@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Domain.Entidades.Vo;
+﻿using ALAYSchoolManager.Domain.Entidades.Vo;
 
-namespace ALAYSchoolManagment.Domain.Entidades.Shared
+namespace ALAYSchoolManager.Domain.Entidades.Shared
 {
     public abstract class Pessoa : EntidadeBase
     {

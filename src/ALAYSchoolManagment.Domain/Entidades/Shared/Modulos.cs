@@ -1,4 +1,4 @@
-namespace ALAYSchoolManagment.Domain.Entidades.Shared;
+namespace ALAYSchoolManager.Domain.Entidades.Shared;
 
 public class Modulos
 {

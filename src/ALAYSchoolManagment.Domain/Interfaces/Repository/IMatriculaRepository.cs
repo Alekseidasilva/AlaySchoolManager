@@ -1,7 +1,7 @@
-﻿using ALAYSchoolManagment.Domain.Entidades;
-using ALAYSchoolManagment.Domain.Interfaces.Repository.Shared;
+﻿using ALAYSchoolManager.Domain.Entidades;
+using ALAYSchoolManager.Domain.Interfaces.Repository.Shared;
 
-namespace ALAYSchoolManagment.Domain.Interfaces.Repository;
+namespace ALAYSchoolManager.Domain.Interfaces.Repository;
 
 public interface IMatriculaRepository : IBaseSharedRepository<Matriculas>
 {

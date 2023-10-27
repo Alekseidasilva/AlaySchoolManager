@@ -1,6 +1,6 @@
-﻿using ALAYSchoolManagment.Domain.Entidades;
+﻿using ALAYSchoolManager.Domain.Entidades;
 
-namespace ALAYSchoolManagment.Domain.Interfaces.Services.Shared
+namespace ALAYSchoolManager.Domain.Interfaces.Services.Shared
 {
     public interface IAlunoEmolumentosService : IBaseSharedService<AlunoEmolumentos>
     {

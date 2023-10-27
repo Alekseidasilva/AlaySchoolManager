@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using ALAYSchoolManager.Application.ViewModels.Shared;
+using Microsoft.AspNetCore.Mvc;
 
-namespace ALAYSchoolManagment.Presentation.IU.Controllers
+namespace ALAYSchoolManager.Presentation.IU.Controllers
 {
     //[Authorize]
     public class HomeController : Controller

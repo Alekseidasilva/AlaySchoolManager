@@ -1,8 +1,8 @@
-﻿using ALAYSchoolManagment.Domain.Entidades;
-using ALAYSchoolManagment.Domain.Interfaces.Repository;
-using ALAYSchoolManagment.Infra.Data.Context;
+﻿using ALAYSchoolManager.Domain.Entidades;
+using ALAYSchoolManager.Domain.Interfaces.Repository;
+using ALAYSchoolManager.Infra.Data.Context;
 
-namespace ALAYSchoolManagment.Infra.Data.Repository;
+namespace ALAYSchoolManager.Infra.Data.Repository;
 
 public class PagamentosRepository : BaseRepository<Pagamentos>, IPagamentosRepository
 {
