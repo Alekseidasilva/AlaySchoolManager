@@ -32,6 +32,7 @@ public class ModulosTest
 
         //Assert
         Assert.AreEqual(1, 1);
+        Assert.AreNotSame(1, 2);
 
 
     }

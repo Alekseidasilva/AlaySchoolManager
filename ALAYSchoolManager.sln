@@ -35,7 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3", "4.3", "{DA27B338-F54
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManager.Application", "src\ALAYSchoolManagment.Application\ALAYSchoolManager.Application.csproj", "{54A466EA-A760-42E5-B4B3-C8005EA1501A}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ALAYSchoolManagmentDb", "Db\ALAYSchoolManagerDB\ALAYSchoolManagmentDb.sqlproj", "{AB8612AF-AFE9-4997-BC0D-232CCDAF76BF}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ALAYSchoolManagerDB", "Db\ALAYSchoolManagerDB\ALAYSchoolManagerDB.sqlproj", "{AB8612AF-AFE9-4997-BC0D-232CCDAF76BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
