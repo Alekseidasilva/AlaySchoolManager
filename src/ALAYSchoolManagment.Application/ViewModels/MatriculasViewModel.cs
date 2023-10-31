@@ -22,12 +22,12 @@ public class MatriculasViewModel
     //#region AnoAcademico
     //public AnoAcademicoViewModel MatriculaAnoAcademico { get; set; }
     //#endregion
-    //#region Emolumentos
+    #region Emolumentos
 
-    //public List<EmolumentosModulosViewModel> EmolumentosObrigatorios { get; set; }
-    //public List<EmolumentosModulosViewModel> EmolumentosOpcionais { get; set; }
+    public List<EmolumentosModulosViewModel> EmolumentosObrigatorios { get; set; }
+    public List<EmolumentosModulosViewModel> EmolumentosOpcionais { get; set; }
 
-    //#endregion
+    #endregion
     #region Usuario Cadastrador
     public string MatriculaUsuarioId { get; set; }
 

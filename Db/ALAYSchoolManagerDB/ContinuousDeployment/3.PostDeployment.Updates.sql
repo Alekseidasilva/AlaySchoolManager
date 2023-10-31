@@ -86,19 +86,19 @@ INSERT dbo.TBAnoAcademico (AnoAcademicoId,AnoAcademicoDesignacao)
 END
 
 GO
----------------------------EMOLUMENTOS MODULOS----------------------------------------
---IF NOT EXISTS(	SELECT 1	FROM dbo.TBEmolumentoModulo) BEGIN
---INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 1, 1, 500.00, '1', CONVERT(bit, 'True'))
---INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 2, 2, 250.00, '1', CONVERT(bit, 'True'))
---INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 3, 1, 10000.45, '1', CONVERT(bit, 'True'))
---INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 4, 2, 152.74, '1', CONVERT(bit, 'True'))
---INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 5, 2, 123.81, '1', CONVERT(bit, 'True'))
---INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 1, 1, 100.80, '2', CONVERT(bit, 'True'))
---INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 2, 2, 456.97, '2', CONVERT(bit, 'True'))
---INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 3, 1, 2500.01, '2', CONVERT(bit, 'True'))
---INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 4, 2, 100.31, '2', CONVERT(bit, 'True'))
---INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 5, 2, 123.00, '2', CONVERT(bit, 'True'))
---END
+-------------------------EMOLUMENTOS MODULOS----------------------------------------
+IF NOT EXISTS(	SELECT 1	FROM dbo.TBEmolumentoModulo) BEGIN
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 1, 1, 500.00, '1', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 2, 2, 250.00, '1', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 3, 1, 10000.45, '1', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 4, 2, 152.74, '1', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 5, 2, 123.81, '1', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 1, 1, 100.80, '2', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 2, 2, 456.97, '2', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 3, 1, 2500.01, '2', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 4, 2, 100.31, '2', CONVERT(bit, 'True'))
+INSERT dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 5, 2, 123.00, '2', CONVERT(bit, 'True'))
+END
 
 
 
@@ -108,14 +108,14 @@ GO
 
 
 
---IF NOT EXISTS(	SELECT 1 FROM dbo.TBPessoas) BEGIN
---INSERT INTO TBPessoas (PessoaNomeCompleto, PessoaContribuinte, PessoaDataNascimento, PessoaGeneroId, PessoaEstadoCivilId, PessoaDataCadastro, PessoaEstado)
---  VALUES ('Aleksei Justino Mateus Dondo da Silva', '003013895ME035', GETDATE(), 1, 2, GETDATE(), 1),('Telma Maria Damiao da Costa da Silva', '003013895ME035', GETDATE(), 2, 2, GETDATE(), 1);
---	END
+IF NOT EXISTS(	SELECT 1 FROM dbo.TBPessoas) BEGIN
+INSERT INTO dbo.TBPessoas (PessoaId,PessoaNomeCompleto, PessoaContribuinte, PessoaDataNascimento, PessoaGeneroId, PessoaEstadoCivilId, PessoaDataCadastro, PessoaEstado)
+  VALUES (1,'Aleksei Justino Mateus Dondo da Silva', '003013895ME035', GETDATE(), 1, 2, GETDATE(), 1),(2,'Telma Maria Damiao da Costa da Silva', '003013895ME035', GETDATE(), 2, 2, GETDATE(), 1);
+END
 
 
---  GO
---IF NOT EXISTS(SELECT 1	FROM dbo.TBAlunos) BEGIN
---INSERT TBAlunos (AlunoPessoaId, AlunoNMatricula)
---  VALUES (1,'0001'),(2,'0002');
---END
+  GO
+IF NOT EXISTS(SELECT 1	FROM dbo.TBAlunos) BEGIN
+INSERT dbo.TBAlunos (AlunoPessoaId, AlunoNMatricula)
+  VALUES (1,'0001'),(2,'0002');
+END
