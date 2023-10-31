@@ -10,48 +10,48 @@ EXEC sp_execute_script @sql = 'UPDATE Table....', @author = 'Your Name'
 */
 
 
--------------------------ESTADO CIVIL----------------------------------------
+---------------------------ESTADO CIVIL----------------------------------------
 IF NOT EXISTS(	SELECT 1	FROM dbo.TBEstadoCivil) BEGIN
-INSERT TBEstadoCivil (EstadoCivilDesignacao)
+INSERT dbo.TBEstadoCivil (EstadoCivilDesignacao)
   VALUES ('Solteiro'),('Casado'),('Divorciado'),('Viúvo');
 END
 
 GO
--------------------------GENEROS----------------------------------------
+---------------------------GENEROS----------------------------------------
 IF NOT EXISTS(	SELECT 1	FROM dbo.TBGeneros)BEGIN
-INSERT TBGeneros (GeneroDesignacao)
-  VALUES ('Masculino'),('Femenino');
+INSERT dbo.TBGeneros (GeneroDesignacao)
+  VALUES ('MASCULINO'),('FEMENINO');
 END
 
 GO
--------------------------MODULOS----------------------------------------
+---------------------------MODULOS----------------------------------------
 IF NOT EXISTS(SELECT 1	FROM dbo.TBModulos tm) BEGIN
-INSERT TBModulos (ModuloDesignacao)
-  VALUES ('Creche'),('Colégio');
+INSERT dbo.TBModulos (ModuloDesignacao)
+  VALUES ('CRECHE'),('COLÉGIO');
 END
 
 GO
--------------------------MESES----------------------------------------
+---------------------------MESES----------------------------------------
 IF NOT EXISTS(	SELECT 1	FROM dbo.TBMeses tm) BEGIN
-INSERT TBMeses (MesDesignacao)  VALUES 
-('Janeiro'),('Fevereiro'),('Março'),('Abril'),('Maio'),('Junho'),
-('Julho'),('Agosto'),('Setembro'),('Outubro'),('Novembro'),('Dezembro');
+INSERT dbo.TBMeses (MesDesignacao)  VALUES 
+('JANEIRO'),('FEVEREIRO'),('MARÇO'),('ABRIL'),('MAIO'),('JUNHO'),
+('JULHO'),('AGOSTO'),('SETEMBRO'),('OUTUBRO'),('NOVEMBRO'),('DEZEMBRO');
 END
 
 go
--------------------------EMOLUMENTOS FACTORES----------------------------------------
+---------------------------EMOLUMENTOS FACTORES----------------------------------------
 
 IF NOT EXISTS(	SELECT 1	FROM dbo.TBEmolumentosFactores) BEGIN
-	INSERT TBEmolumentosFactores (EmolumentoFactorDesignacao)
-  VALUES ('Obrigatório'),('Opcional');
+	INSERT dbo.TBEmolumentosFactores (EmolumentoFactorDesignacao)
+  VALUES ('OBRIGATÓRIO'),('OPCIONAL');
 END
 
 GO
 
--------------------------DOCUMENTOS TIPOS----------------------------------------
+---------------------------DOCUMENTOS TIPOS----------------------------------------
 
 IF NOT EXISTS(	SELECT 1	FROM dbo.TBDocumentosTipos) BEGIN	
-INSERT TBDocumentosTipos (DocumentosTiposDesigncao)
+INSERT dbo.TBDocumentosTipos (DocumentosTiposDesigncao)
   VALUES ('Cédula Pessoal'),('Bilhete de Identidade'),('PassaPorte');
 END
 
@@ -59,46 +59,46 @@ GO
 -------------------------CONTACTOS TIPOS----------------------------------------
 
 IF NOT EXISTS(	SELECT 1	FROM dbo.TBContactosTipo) BEGIN
-INSERT TBContactosTipo (TBContactosTipoDesignacao)
+INSERT dbo.TBContactosTipo (TBContactosTipoDesignacao)
   VALUES ('Telefone'),('Email');
 END
 
 GO
--------------------------EMOLUMENTOS----------------------------------------
+---------------------------EMOLUMENTOS----------------------------------------
 
 IF NOT EXISTS(	SELECT 1	FROM dbo.TBEmolumentos) BEGIN
-INSERT TBEmolumentos (EmolumentoDesignacao)
+INSERT dbo.TBEmolumentos (EmolumentoDesignacao)
   VALUES ('MATRICULA'),('RECONFIRMAÇÃO MATRICULA'),('PROPINA'),('ALIMENTACAO'),('TRANSPORTE');
 END
 
 GO
--------------------------Formas de Pagamento----------------------------------------
+---------------------------Formas de Pagamento----------------------------------------
 IF NOT EXISTS(	SELECT 1	FROM dbo.TBFormasPagamento) BEGIN
-INSERT INTO TBFormasPagamento (FormasPagamentoDesignacao)
+INSERT INTO dbo.TBFormasPagamento (FormasPagamentoDesignacao)
   VALUES ('NUMERÁRIO'),('DEPÓSITO'),('TRANSFERÊNCIA');
 END
 
 GO
--------------------------ANO ACADEMICO----------------------------------------
+---------------------------ANO ACADEMICO----------------------------------------
 IF NOT EXISTS(	SELECT 1	FROM dbo.TBAnoAcademico) BEGIN
-INSERT TBAnoAcademico (AnoAcademicoId,AnoAcademicoDesignacao)
+INSERT dbo.TBAnoAcademico (AnoAcademicoId,AnoAcademicoDesignacao)
   VALUES (2023,'2023-2024');
 END
 
 GO
--------------------------EMOLUMENTOS MODULOS----------------------------------------
-IF NOT EXISTS(	SELECT 1	FROM dbo.TBEmolumentoModulo) BEGIN
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 1, 1, 500.00, '1', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 2, 2, 250.00, '1', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 3, 1, 10000.45, '1', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 4, 2, 152.74, '1', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 5, 2, 123.81, '1', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 1, 1, 100.80, '2', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 2, 2, 456.97, '2', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 3, 1, 2500.01, '2', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 4, 2, 100.31, '2', CONVERT(bit, 'True'))
-INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 5, 2, 123.00, '2', CONVERT(bit, 'True'))
-END
+---------------------------EMOLUMENTOS MODULOS----------------------------------------
+--IF NOT EXISTS(	SELECT 1	FROM dbo.TBEmolumentoModulo) BEGIN
+--INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 1, 1, 500.00, '1', CONVERT(bit, 'True'))
+--INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 2, 2, 250.00, '1', CONVERT(bit, 'True'))
+--INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 3, 1, 10000.45, '1', CONVERT(bit, 'True'))
+--INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 4, 2, 152.74, '1', CONVERT(bit, 'True'))
+--INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (1, 5, 2, 123.81, '1', CONVERT(bit, 'True'))
+--INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 1, 1, 100.80, '2', CONVERT(bit, 'True'))
+--INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 2, 2, 456.97, '2', CONVERT(bit, 'True'))
+--INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 3, 1, 2500.01, '2', CONVERT(bit, 'True'))
+--INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 4, 2, 100.31, '2', CONVERT(bit, 'True'))
+--INSERT ALAYSchoolManagmentDb.dbo.TBEmolumentoModulo(EmolumentoModuloModuloId, EmolumentoModuloEmolumentoId, EmolumentoModuloFactorId, EmolumentoModuloPreco, EmolumentoModuloUsuarioCadastrador, EmolumentoModuloEstado) VALUES (2, 5, 2, 123.00, '2', CONVERT(bit, 'True'))
+--END
 
 
 

@@ -28,10 +28,10 @@ public class MatriculasViewModel
     //public List<EmolumentosModulosViewModel> EmolumentosOpcionais { get; set; }
 
     //#endregion
-    //#region Usuario Cadastrador
-    //public required string MatriculaUsuarioId { get; set; }
+    #region Usuario Cadastrador
+    public string MatriculaUsuarioId { get; set; }
 
 
-    //#endregion
-    //public DateTime DataHora { get; set; }
+    #endregion
+    public DateTime DataHora { get; set; }
 }
