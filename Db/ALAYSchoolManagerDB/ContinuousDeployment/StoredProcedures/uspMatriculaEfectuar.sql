@@ -52,11 +52,6 @@ BEGIN TRY
 
          INSERT INTO TBPagamentos (PagamentoAlunoNMatricula, PagamentoEmolumentoId, PagamentoAnoAcademicoId, PagamentoValorTotal, PagamentoDataHora, PagamentoUsuarioId)
   VALUES (@@matricula, @PagamentoEmolumentoId, @MatriculaAnoAcademicoId, @PagamentoValorTotal, @PessoaDataCadastro, @Usuariocadastrador);
-
-         
-
-
-
               COMMIT TRANSACTION
 			      SELECT @@matricula AS RETORNO;
     END TRY
