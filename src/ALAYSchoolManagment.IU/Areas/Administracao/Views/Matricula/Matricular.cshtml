@@ -52,7 +52,7 @@
                                 </div>
                                 <div id="collapseThree3" class="collapse" data-parent="#accordion-two">
                                     <div class="card-body">
-                                        @* <partial name="Partials/_emolumentos" /> *@
+                                        <partial name="Partials/_emolumentos" />
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@
             $("#ModCreche").click(function () {
                 moduloId = $("#ModCreche").val();
                 PreencherResumoModuloSelecionado(moduloId);
-                if (moduloId == 1) {
+                if (moduloId.equal(1)) {
                     CarregarEmolumentosObrigatorios(moduloId);
                     CarregarEmolumentosOpcionais(moduloId);
                 }
@@ -146,12 +146,12 @@
                     alert("o Modulo deve ser Selecionado");
                 }
             });
-
-
             $("#ModColegio").click(function () {
+
                 moduloId = $("#ModColegio").val();
                 PreencherResumoModuloSelecionado(moduloId);
-                if (moduloId == 2) {
+                if (moduloId === 2) {
+                    alert();
                     CarregarEmolumentosObrigatorios(moduloId);
                     CarregarEmolumentosOpcionais(moduloId);
                 }
@@ -159,8 +159,6 @@
                     alert("o Modulo deve ser Selecionado");
                 }
             });
-
-
             // EMolumentos Obrigatorios
             let somaDosEmolumentoObrigatorios = [];
             let somaDosEmolumentoOpcionais = [];
@@ -266,11 +264,9 @@
                 }
             });
         };
-
-
         /*Preencher Dados do Resumo*/
         function PreencherResumoModuloSelecionado(moduloId) {
-            if (moduloId == 1) {
+            if (moduloId.equal(1)) {
                 $("#lblResumoAlunoModulo").text('CRECHE');
             } else {
                 $("#lblResumoAlunoModulo").text('COLEGIO');
@@ -291,10 +287,10 @@
             $("#selectedAlunoGenero").change(function () {
                 alert($("#selectedAlunoGenero").val());
                 var gen = $("#selectedAlunoGenero").val();
-                if (gen == 0) {
+                if (gen.equal(0)) {
                     $("#lblresumoAlunoGenero").text("Não Identificado");
                 } else
-                    if (gen == 1) {
+                    if (gen.equal(1)) {
                         $("#lblresumoAlunoGenero").text("MASCULINO");
                     } else {
                         $("#lblresumoAlunoGenero").text("FEMENINO");
@@ -303,7 +299,7 @@
             $("#selectedAlunoGenero").change(function () {
                 alert($("#selectedAlunoGenero").val());
                 var gen = $("#selectedAlunoGenero").val();
-                if (gen == 1) {
+                if (gen.equal(1)) {
                     $("#lblresumoAlunoGenero").text("MASCULINO");
                 } else {
                     $("#lblresumoAlunoGenero").text("FEMENINO");
@@ -311,5 +307,19 @@
             });
 
         });
+
+
+
+
+
+                                                                                                                                                                                                // $(function () {
+                                                                                                                                                                                                //     $('#search').on('keyup', function () {
+                                                                                                                                                                                                //         var pattern = $(this).val();
+                                                                                                                                                                                                //         $('.searchable-container .items').hide();
+                                                                                                                                                                                                //         $('.searchable-container .items').filter(function () {
+                                                                                                                                                                                                //             return $(this).text().match(new RegExp(pattern, 'i'));
+                                                                                                                                                                                                //         }).show();
+                                                                                                                                                                                                //     });
+                                                                                                                                                                                                // });
     </script>
 }

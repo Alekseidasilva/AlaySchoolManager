@@ -21636,3 +21636,36 @@ hr.style-1 {
         -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+
+.searchable-container {
+    margin: 2px 0 0 0
+}
+
+    .searchable-container label.btn-default.active {
+        background-color: #007ba7;
+        color: #FFF
+    }
+
+    .searchable-container label.btn-default {
+        width: 90%;
+        border: 1px solid #efefef;
+        margin: 5px;
+        box-shadow: 5px 8px 8px 0 #ccc;
+    }
+
+    .searchable-container label .bizcontent {
+        width: 100%;
+    }
+
+    .searchable-container .btn-group {
+        width: 90%
+    }
+
+    .searchable-container .btn span.glyphicon {
+        opacity: 0;
+    }
+
+    .searchable-container .btn.active span.glyphicon {
+        opacity: 1;
+    }
