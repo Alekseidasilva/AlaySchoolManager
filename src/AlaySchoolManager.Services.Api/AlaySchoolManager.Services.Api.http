@@ -1,0 +1,6 @@
+@AlaySchoolManager.Services.Api_HostAddress = http://localhost:5072
+
+GET {{AlaySchoolManager.Services.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALAYSchoolManager.Applicati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlaySchoolManager.UnitTests", "tests\AlaySchoolManager.UnitTests\AlaySchoolManager.UnitTests.csproj", "{9E5BA3A3-4869-409C-B0C8-9F0AF621A6A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlaySchoolManager.Services.Api", "src\AlaySchoolManager.Services.Api\AlaySchoolManager.Services.Api.csproj", "{AC93C9CE-B011-47DA-A346-34A705B1C39A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{9E5BA3A3-4869-409C-B0C8-9F0AF621A6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E5BA3A3-4869-409C-B0C8-9F0AF621A6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E5BA3A3-4869-409C-B0C8-9F0AF621A6A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC93C9CE-B011-47DA-A346-34A705B1C39A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC93C9CE-B011-47DA-A346-34A705B1C39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC93C9CE-B011-47DA-A346-34A705B1C39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC93C9CE-B011-47DA-A346-34A705B1C39A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{CB4AD18C-F97C-4D2C-A9A9-AEB461826BCC} = {C4530FB7-54BD-474F-9B5A-C9311441C32C}
 		{54A466EA-A760-42E5-B4B3-C8005EA1501A} = {27DEC918-0F17-40FA-8E73-57F3AD1EC99B}
 		{9E5BA3A3-4869-409C-B0C8-9F0AF621A6A8} = {3DCA9B63-B6B4-4A28-9587-F1177B35ADA2}
+		{AC93C9CE-B011-47DA-A346-34A705B1C39A} = {044D10B2-3891-4C6E-9B97-E0D048D1C321}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D3DEC6EC-7923-4FB7-AE70-6F9BF5A05293}
