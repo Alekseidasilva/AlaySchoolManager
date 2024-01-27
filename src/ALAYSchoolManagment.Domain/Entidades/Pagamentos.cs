@@ -10,7 +10,7 @@ namespace ALAYSchoolManager.Domain.Entidades
             PagamentoAlunoNMatricula = new Aluno();
             PagamentoEmolumentoId = new Emolumentos();
             PagamentoModuloId = new Modulos();
-            PagamentoAnoAcademicoId = new AnoAcademico();
+            //PagamentoAnoAcademicoId = new AnoAcademico();
 
 
 

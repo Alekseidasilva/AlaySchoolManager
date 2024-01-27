@@ -14,7 +14,7 @@ public class AnoAcademicoTest
         //Arrange
         var anoAcademico = new AnoAcademico("2023-2024");
         //Act
-        anoAcademico.
+        //anoAcademico.
         //Assert
     }
 

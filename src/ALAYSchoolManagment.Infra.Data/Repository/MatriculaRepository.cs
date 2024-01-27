@@ -30,10 +30,10 @@ public class MatriculaRepository : BaseSharedRepository<Matriculas>, IMatriculaR
                     PessoaContribuinte = Convert.ToString(linha["PessoaContribuinte"]),
                     PessoaDataNascimento = Convert.ToDateTime(linha["PessoaDataNascimento"])
                 },
-                MatriculaAnoAcademicoId = new AnoAcademico
-                {
-                    AnoAcademicoDesignacao = Convert.ToString(linha["AnoAcademicoDesignacao"])
-                },
+                //MatriculaAnoAcademicoId = new AnoAcademico
+                //{
+                //    AnoAcademicoDesignacao = Convert.ToString(linha["AnoAcademicoDesignacao"])
+                //},
                 MatriculaModuloId = new Modulos
                 {
                     ModuloId = Convert.ToInt16(linha["ModuloId"]),

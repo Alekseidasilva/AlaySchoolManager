@@ -25,10 +25,10 @@ public class MatriculaConfirmarRepository : BaseRepository<MatriculaConfirmar>, 
                     AlunoNMatricula = Convert.ToString(linha["AlunoNMatricula"]),
                     PessoaNomeCompleto = Convert.ToString(linha["PessoaNomeCompleto"])
                 },
-                AnoAcademicoId = new AnoAcademico
-                {
-                    AnoAcademicoDesignacao = Convert.ToString(linha["AnoAcademicoDesignacao"])
-                },
+                //AnoAcademicoId = new AnoAcademico
+                //{
+                //    AnoAcademicoDesignacao = Convert.ToString(linha["AnoAcademicoDesignacao"])
+                //},
                 DataHora = Convert.ToDateTime(linha["DataHora"]),
                 UsuarioCadastrador = Convert.ToString(linha["UsuarioCadastrador"])
 

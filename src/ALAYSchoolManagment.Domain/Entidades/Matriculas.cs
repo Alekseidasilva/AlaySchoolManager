@@ -8,7 +8,7 @@ public class Matriculas : EntidadeBase
     {
         MatriculaAlunoId = new Aluno();
         MatriculaModuloId = new Modulos();
-        MatriculaAnoAcademicoId = new AnoAcademico();
+        //MatriculaAnoAcademicoId = new AnoAcademico();
     }
     public Aluno MatriculaAlunoId { get; set; }
     public Modulos MatriculaModuloId { get; set; }
