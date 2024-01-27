@@ -8,22 +8,45 @@ namespace AlaySchoolManager.Services.Api.Controllers
     [ApiController]
     public class MatriculasController : ControllerBase
     {
-        // GET: api/<MatriculasController>
+
+        /// <summary>
+        /// Obter Todos Alunos Matriculados
+        /// </summary>
+        /// <returns>Coleção de Alunos Matriculados</returns>
+        /// <responde code="200">Sucesso</responde>
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public IEnumerable<string> Matriculados()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "ALeksei da SIlva", "Telma Silva" };
         }
 
-        // GET api/<MatriculasController>/5
+        /// <summary>
+        /// Obter Aluno Matriculado
+        /// </summary>
+        /// <param name="id">Identificador da Matricula</param>
+        /// <returns>Dados da Matricula</returns>
+        /// <response code="200">Sucesso</response>
+        /// <response code="404">Não Encontrado</response>
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<MatriculasController>
+        /// <summary>
+        /// Matricular Aluno
+        /// </summary>
+        /// <remarks>
+        /// {Objecto Json }
+        /// </remarks>
+        /// <param name="value">Dados do Aluno</param>
+        /// <returns>Objecto recem Criado</returns>
+        /// <response code="201">Sucesso</response>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public void Post([FromBody] string value)
         {
         }
