@@ -31,9 +31,9 @@ namespace AlaySchoolManager.Services.Api.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public string Get(int id)
+        public string Get(string id)
         {
-            return "value";
+            return id;
         }
 
         /// <summary>

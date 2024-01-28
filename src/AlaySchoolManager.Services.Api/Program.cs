@@ -9,21 +9,21 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    //c.SwaggerDoc("", new OpenApiInfo
-    //{
-    //    Title = "ALAYSchoolManagerApi",
-    //    Version = "v1",
-    //    Contact = new OpenApiContact
-    //    {
-    //        Name = "A.J.M.D.S - Soluções Tecnologicas",
-    //        Email = "geral@ajmdstec.ao",
-    //        Url = new Uri("https://ajmdstec.ao")
-    //    },
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "ALAYSchoolManagerApi",
+        Version = "v1",
+        Contact = new OpenApiContact
+        {
+            Name = "A.J.M.D.S - Soluções Tecnologicas",
+            Email = "geral@ajmdstec.ao",
+            Url = new Uri("https://ajmdstec.ao")
+        },
 
-    //});
-    //var xmlFile = "ALAYSchoolManagerApi.xml";
-    //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    //c.IncludeXmlComments(xmlPath);
+    });
+    var xmlFile = "AlaySchoolManager.Services.Api.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    c.IncludeXmlComments(xmlPath);
 });
 
 var app = builder.Build();
